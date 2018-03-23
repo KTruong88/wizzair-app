@@ -1,44 +1,53 @@
 <template>
-  <b-navbar toggleable="md" type="dark" variant="info">
+  <b-navbar id="navbar" toggleable="md" type="dark" variant="info">
 
   <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-  <b-navbar-brand href="#">NavBar</b-navbar-brand>
+  <b-navbar-brand id="logo" href="/">
+    <img src="https://wizzair.com/static/assets/images/wizz-logo--white_e5edffeb.svg" alt="">
+  </b-navbar-brand>
 
   <b-collapse is-nav id="nav_collapse">
 
-    <b-navbar-nav>
-      <b-nav-item href="#">Link</b-nav-item>
-      <b-nav-item href="#" disabled>Disabled</b-nav-item>
-    </b-navbar-nav>
-
     <!-- Right aligned nav items -->
-    <b-navbar-nav class="ml-auto">
+    <b-navbar-nav type="light" class="ml-auto">
 
-      <b-nav-form>
-        <b-form-input size="sm" class="mr-sm-2" type="text" placeholder="Search"/>
-        <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
-      </b-nav-form>
+      <b-nav-item class="nav-item">
+        Plan
+      </b-nav-item>
 
-      <b-nav-item-dropdown text="Lang" right>
-        <b-dropdown-item href="#">EN</b-dropdown-item>
-        <b-dropdown-item href="#">ES</b-dropdown-item>
-        <b-dropdown-item href="#">RU</b-dropdown-item>
-        <b-dropdown-item href="#">FA</b-dropdown-item>
-      </b-nav-item-dropdown>
+      <b-nav-item class="item-divider">
+      </b-nav-item>
 
-      <b-nav-item-dropdown right>
-        <!-- Using button-content slot -->
-        <template slot="button-content">
-          <em>User</em>
-        </template>
-        <b-dropdown-item href="#">Profile</b-dropdown-item>
-        <b-dropdown-item href="#">Signout</b-dropdown-item>
-      </b-nav-item-dropdown>
+      <b-nav-item class="nav-item" right>
+        Information
+      </b-nav-item>
+
+      <b-nav-item class="item-divider">
+      </b-nav-item>
+
+      <b-nav-item class="nav-item" right>
+        Check In & Bookings
+      </b-nav-item>
+
+      <b-nav-item class="item-divider">
+      </b-nav-item>
+
+      <b-nav-item class="nav-item" right>
+        Sign In
+      </b-nav-item>
+
+      <b-nav-item class="item-divider">
+      </b-nav-item>
+
+      <b-nav-item right>
+        <span class="flag"></span>English
+      </b-nav-item>
     </b-navbar-nav>
 
   </b-collapse>
 </b-navbar>
+
 </template>
 
 <script>
@@ -56,9 +65,48 @@ export default {
 </script>
 
 <style scoped>
-  #center {
-    align-items: center;
-    list-style-type: none;
 
-  }
+#navbar {
+  margin-top: -60px;
+  height: 60px;
+}
+
+#logo {
+  margin-left: 2%;
+}
+
+.item-divider {
+  width: 2px;
+  height: 30px;
+  background-color: #201dbc;
+}
+
+.nav-item {
+  font-size: 12px;
+  font-family: Source Sans Pro, sans-serif;
+  height: 45px;
+  line-height: 25px;
+}
+
+.nav-item:hover {
+  text-decoration-line: underline;
+}
+
+.bg-info {
+  background-color: #06038d !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.flag {
+  width: 5px;
+  height: 5px;
+  background-image: url('http://www.w3.org/2000/svg');
+}
+
 </style>
