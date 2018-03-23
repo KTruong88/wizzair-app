@@ -12,28 +12,28 @@
     <!-- Right aligned nav items -->
     <b-navbar-nav type="light" class="ml-auto">
 
-      <b-nav-item class="nav-item">
+      <b-nav-item class="nav-item padding">
         Plan
       </b-nav-item>
 
       <b-nav-item class="item-divider">
       </b-nav-item>
 
-      <b-nav-item class="nav-item" right>
+      <b-nav-item class="nav-item padding" right>
         Information
       </b-nav-item>
 
       <b-nav-item class="item-divider">
       </b-nav-item>
 
-      <b-nav-item class="nav-item" right>
+      <b-nav-item class="nav-item padding" right>
         Check In & Bookings
       </b-nav-item>
 
       <b-nav-item class="item-divider">
       </b-nav-item>
 
-      <b-nav-item class="nav-item" right>
+      <b-nav-item class="nav-item padding" right>
         Sign In
       </b-nav-item>
 
@@ -41,7 +41,7 @@
       </b-nav-item>
 
       <b-nav-item right>
-        <span class="flag"></span>English
+        <span class="flag padding"></span>English
       </b-nav-item>
     </b-navbar-nav>
 
@@ -86,6 +86,12 @@ export default {
   font-family: Source Sans Pro, sans-serif;
   height: 45px;
   line-height: 25px;
+}
+
+.padding {
+  padding-right: 10px;
+  padding-left: 10px;
+  font-weight: 520;
 }
 
 .nav-item:hover {

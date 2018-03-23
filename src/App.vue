@@ -1,15 +1,19 @@
 <template>
   <div id="app">
     <Navbar />
+    <Jumbotron />
   </div>
 </template>
 
 <script>
 import Navbar from './components/navbar'
+import Jumbotron from './components/jumbotron'
+
 export default {
   name: 'App',
   components: {
-    Navbar
+    Navbar,
+    Jumbotron
   }
 }
 </script>
