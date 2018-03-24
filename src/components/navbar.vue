@@ -68,7 +68,7 @@ export default {
 
 #navbar {
   margin-top: -60px;
-  height: 60px;
+  height: 65px;
 }
 
 #logo {

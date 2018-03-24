@@ -1,19 +1,19 @@
 <template>
   <div id="app">
     <Navbar />
-    <Jumbotron />
+    <Carousel />
   </div>
 </template>
 
 <script>
 import Navbar from './components/navbar'
-import Jumbotron from './components/jumbotron'
+import Carousel from './components/carousel'
 
 export default {
   name: 'App',
   components: {
     Navbar,
-    Jumbotron
+    Carousel,
   }
 }
 </script>
