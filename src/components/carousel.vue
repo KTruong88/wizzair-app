@@ -40,12 +40,29 @@
 
     <b-form class="bform">
       <div class="top-wrapper">
-        <b-form-input class="input">
+        <b-form-input class="input input1" type="text" placeholder="Origin">
+        </b-form-input>
+
+        <div class="arrow_box">
+
+        </div>
+
+        <b-form-input class="input input2" type="text" placeholder="Destination">
+        </b-form-input>
+
+      </div>
+
+      <div class="top-wrapper bottom-wrapper">
+
+        <b-form-input class="input input3">
 
         </b-form-input>
-        <b-form-input class="input">
+        <b-form-input class="input input4">
 
         </b-form-input>
+        <button class="submit-button">
+          Search
+        </button>
       </div>
     </b-form>
   </div>
@@ -147,12 +164,78 @@ export default {
   justify-content: center;
   width: 88%;
   height: 138px;
-  border: 1px solid green;
 }
+
+.bottom-wrapper {
+  justify-content: space-between;
+  height: 220px;
+}
+
+.submit-button {
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #c6007e;
+  text-transform: uppercase;
+  font-family: P22 Underground Pro,sans-serif;
+  height: auto;
+  font-weight: 450;
+  cursor: pointer;
+  vertical-align: middle;
+  min-width: 150px;
+  padding: 15px 20px;
+  font-size: 14px;
+}
+
 .input {
   width: 100%;
   height: 70px;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: Source Sans Pro,sans-serif;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
+  border: 1px solid #919191;
+}
+
+.input1 {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom: transparent;
+}
+
+.input2 {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.arrow_box {
+	position: relative;
+	background: #fff;
+}
+
+.arrow_box:after, .arrow_box:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #fff;
+	border-width: 8px;
+	margin-left: -8px;
+}
+
+.arrow_box:before {
+	border-color: rgba(145, 145, 145, 0);
+	border-top-color: #919191;
+	border-width: 9px;
+	margin-left: -9px;
 }
 </style>
