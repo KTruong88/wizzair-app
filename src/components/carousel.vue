@@ -7,17 +7,40 @@
                 @sliding-start="onSlideStart"
                 @sliding-end="onSlideEnd"
     >
-      <b-carousel-slide
-                        class="slide1"
-      ></b-carousel-slide>
+      <b-carousel-slide class="slide1">
+        <div class="hero-banner-wrap">
+          <div class="hero-banner">
+            <img src="https://wizzair.com/static/docs/default-source/promotions/winter-schedule-2018/promo_en_15d178a7.svg"
+            >
+          </div>
+        </div>
+      </b-carousel-slide>
 
-      <b-carousel-slide
-                        class ="slide2"
-      ></b-carousel-slide>
+      <b-carousel-slide class ="slide2">
+        <div class="hero-banner-wrap2">
+          <div class="hero-banner2">
+            <h2 class="hero-banner-title">
+              <div class="title">from Podgorica**
+                  <h1 class="title-text">Milan</h1>
+              </div>
+              <strong class="hero-banner__price">‎​€​9.99</strong>
+            </h2>
+          </div>
+        </div>
+      </b-carousel-slide>
 
-      <b-carousel-slide
-                        class ="slide3"
-      ></b-carousel-slide>
+      <b-carousel-slide class ="slide3">
+        <div class="hero-banner-wrap2">
+          <div class="hero-banner2">
+            <h2 class="hero-banner-title">
+              <div class="title">from Glasgow **
+                  <h1 class="title-text">Katowice</h1>
+              </div>
+              <strong class="hero-banner__price">‎​£​22.99</strong>
+            </h2>
+          </div>
+        </div>
+      </b-carousel-slide>
 
 <!-- Carousel form -->
 
@@ -54,9 +77,6 @@
 
       <div class="top-wrapper bottom-wrapper">
 
-        <!-- <b-form-input class="input input3">
-
-        </b-form-input> -->
         <div class="input-wrap">
           <input type="text" class="input-half input-left" placeholder="DEPARTURE">
 
@@ -65,7 +85,7 @@
           </div>
           <input type="text" class="input-half input-right" placeholder="RETURN">
         </div>
-        <b-form-input class="input input4">
+        <b-form-input class="input input4" placeholder="PASSENGERS">
 
         </b-form-input>
         <button class="submit-button">
@@ -97,6 +117,7 @@ export default {
 }
 </script>
 <style scoped>
+
 .slide1 {
   background-image: URL("https://wizzair.com/static/images/default-source/banner-images/shutterstock_273033479_4d42c0fe.jpg");
   background-size: cover;
@@ -105,6 +126,63 @@ export default {
   width: 100%;
   height: 475px;
 }
+
+.hero-banner-wrap {
+  width: 56%;
+  height: 243px;
+  margin-left: 61%;
+}
+
+.hero-banner {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(198,0,126,.9);
+  padding: 20px 20px 10px;
+}
+
+.hero-banner-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.title-text {
+  font-family: P22 Underground Pro,sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.hero-banner__price {
+  font-family: P22 Underground Pro,sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.hero-banner-wrap2 {
+  width: 57%;
+  height: 118px;
+  margin-left: 61%;
+}
+
+.hero-banner2 {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(198,0,126,.9);
+  padding: 20px 20px 10px;
+}
+
+.hero-banner:hover {
+  cursor: pointer;
+}
+
 .slide2 {
   background-image: URL("https://wizzair.com/static/images/default-source/banner-images/rix_721ed023.jpg");
   background-size: cover;
@@ -113,6 +191,7 @@ export default {
   width: 100%;
   height: 475px;
 }
+
 .slide3 {
   background-image: URL("https://wizzair.com/static/images/default-source/banner-images/plq_f0413d49.jpg");
   background-size: cover;
@@ -143,7 +222,7 @@ export default {
 
 .buttons {
   height: 106px;
-  background-color: #f2f2f2;
+  background-color: #E8E8E8;
 }
 
 .buttons:hover {
@@ -152,7 +231,7 @@ export default {
 }
 
 .buttons:focus {
-  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  box-shadow: 0 2px 3px rgba(0,0,0,.2);
   background-color: #f2f2f2;
 }
 
@@ -167,6 +246,7 @@ export default {
 .non-active-buttons {
   background-color:
 }
+
 @media only screen and (max-width:1100px) {
   .carousel-form {
     z-index: 1000;
@@ -186,6 +266,7 @@ export default {
   flex-direction: column;
   width: 100%;
 }
+
 .top-wrapper {
   display: flex;
   align-self: center;
@@ -233,10 +314,18 @@ export default {
   border: 1px solid #919191;
 }
 
+.input::placeholder {
+  color: #C0C0C0;
+}
+
 .input1 {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom: transparent;
+}
+
+.input1:focus {
+  border-bottom: none !important;
 }
 
 .form-control:focus {
@@ -247,9 +336,14 @@ export default {
   -moz-box-shadow: 6px 11px 21px -1px rgba(145,145,145,0.56);
   box-shadow: 6px 11px 21px -1px rgba(145,145,145,0.56);
 }
+
 .input2 {
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
+}
+
+.input2:focus {
+  border-top: 1px solid #919191;
 }
 
 .input-half {
@@ -258,6 +352,7 @@ export default {
   font-size: 16px;
   color: #343434;
   border: 1px solid #919191;
+  padding-bottom: 20px;
 }
 
 .input-left {
@@ -293,8 +388,7 @@ export default {
   cursor: pointer;
 }
 
-.input-right::placeholder
-{
+.input-right::placeholder {
   font-size: 11px;
   font-weight: bold;
   text-indent: 15px;
@@ -305,6 +399,21 @@ export default {
   border-right: 2px solid #919191;
   border-bottom: 2px solid #919191;
   color: transparent;
+}
+
+.input4 {
+  padding-bottom: 30px;
+  color: transparent;
+}
+
+.input4:hover {
+  cursor: pointer;
+}
+
+.input4::placeholder {
+  color: #919191;
+  font-size: 11px;
+  font-weight: bold;
 }
 
 textarea:hover,
@@ -318,8 +427,7 @@ button:active,
 button:hover,
 label:focus,
 .btn:active,
-.btn.active
-{
+.btn.active {
     outline:0px !important;
     -webkit-appearance:none;
 }
@@ -375,10 +483,12 @@ label:focus,
 	border-width: 8px;
 	margin-top: -8px;
 }
+
 .right-arrow:before {
 	border-color: rgba(145, 145, 145, 0);
 	border-left-color: #919191;
 	border-width: 9px;
 	margin-top: -9px;
 }
+
 </style>
