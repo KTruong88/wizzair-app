@@ -24,16 +24,16 @@
   <div class="carousel-form">
 
     <div class="side-buttons">
-      <button class="buttons">
+      <button class="buttons button1">
         Flights
       </button>
-      <button class="buttons">
+      <button class="buttons non-active-buttons">
         Flight & Hotel
       </button>
-      <button class="buttons">
+      <button class="buttons non-active-buttons">
         Hotels
       </button>
-      <button class="buttons">
+      <button class="buttons button4 non-active-buttons">
         Cars
       </button>
     </div>
@@ -54,9 +54,17 @@
 
       <div class="top-wrapper bottom-wrapper">
 
-        <b-form-input class="input input3">
+        <!-- <b-form-input class="input input3">
 
-        </b-form-input>
+        </b-form-input> -->
+        <div class="input-wrap">
+          <input type="text" class="input-half input-left" placeholder="DEPARTURE">
+
+          <div class="right-arrow">
+
+          </div>
+          <input type="text" class="input-half input-right" placeholder="RETURN">
+        </div>
         <b-form-input class="input input4">
 
         </b-form-input>
@@ -123,19 +131,41 @@ export default {
   border-radius: 5px;
   background-color: #f2f2f2;
   box-shadow: 1px 0 2px rgba(0,0,0,.2);
-  width: 28%;
-  height: 425px;
+  width: 29.3%;
+  height: 423px;
 }
 
 .side-buttons {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
-  width: 80px;
+  width: 100px;
 }
 
 .buttons {
   height: 106px;
+  background-color: #f2f2f2;
+}
+
+.buttons:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.buttons:focus {
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  background-color: #f2f2f2;
+}
+
+.button1 {
+  border-top-left-radius: 5px;
+}
+
+.button4 {
+  border-bottom-left-radius: 5px;
+}
+
+.non-active-buttons {
+  background-color:
 }
 @media only screen and (max-width:1100px) {
   .carousel-form {
@@ -147,7 +177,7 @@ export default {
     background-color: #f2f2f2;
     box-shadow: 1px 0 2px rgba(0,0,0,.2);
     width: 40%;
-    height: 420px;
+    height: 423px;
   }
 }
 
@@ -164,6 +194,11 @@ export default {
   justify-content: center;
   width: 88%;
   height: 138px;
+}
+
+.input-wrap {
+  display: flex;
+  width: 100%;
 }
 
 .bottom-wrapper {
@@ -204,9 +239,89 @@ export default {
   border-bottom: transparent;
 }
 
+.form-control:focus {
+  outline: 0;
+  z-index: 20;
+  border: 2px solid #919191;
+  -webkit-box-shadow: 6px 11px 21px -1px rgba(145,145,145,0.56);
+  -moz-box-shadow: 6px 11px 21px -1px rgba(145,145,145,0.56);
+  box-shadow: 6px 11px 21px -1px rgba(145,145,145,0.56);
+}
 .input2 {
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
+}
+
+.input-half {
+  width: 100%;
+  height: 62px;
+  font-size: 16px;
+  color: #343434;
+  border: 1px solid #919191;
+}
+
+.input-left {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-right: transparent;
+  color: transparent;
+}
+
+.input-left::placeholder {
+  font-size: 11px;
+  font-weight: bold;
+  text-indent: 15px;
+}
+
+.input-left:hover {
+  cursor: pointer;
+  outline: none;
+}
+
+.input-left:focus {
+  border-top: 2px solid #919191;
+  border-left: 2px solid #919191;
+  border-bottom: 2px solid #919191;
+}
+
+.input-right {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.input-right:hover {
+  cursor: pointer;
+}
+
+.input-right::placeholder
+{
+  font-size: 11px;
+  font-weight: bold;
+  text-indent: 15px;
+}
+
+.input-right:focus {
+  border-top: 2px solid #919191;
+  border-right: 2px solid #919191;
+  border-bottom: 2px solid #919191;
+  color: transparent;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
 }
 
 .arrow_box {
@@ -237,5 +352,33 @@ export default {
 	border-top-color: #919191;
 	border-width: 9px;
 	margin-left: -9px;
+}
+
+.right-arrow {
+	position: relative;
+	background: #fff;
+}
+.right-arrow:after, .right-arrow:before {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.right-arrow:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: #fff;
+	border-width: 8px;
+	margin-top: -8px;
+}
+.right-arrow:before {
+	border-color: rgba(145, 145, 145, 0);
+	border-left-color: #919191;
+	border-width: 9px;
+	margin-top: -9px;
 }
 </style>
