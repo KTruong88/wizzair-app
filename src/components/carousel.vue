@@ -91,6 +91,12 @@
         <button class="submit-button">
           Search
         </button>
+
+        <div class="links-container">
+          <a href="" class="dates-link">Flexible on Dates?</a>
+          <a href="" class="search-link"> New Search</a>
+        </div>
+
       </div>
     </b-form>
   </div>
@@ -243,8 +249,28 @@ export default {
   border-bottom-left-radius: 5px;
 }
 
-.non-active-buttons {
-  background-color:
+.links-container {
+  margin-bottom: -15px;
+}
+
+.dates-link {
+  float: left;
+  font-size: 11px;
+  font-weight: 700;
+  color: #a6006a;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+
+.search-link {
+  float: right;
+  font-size: 11px;
+  font-weight: 700;
+  color: #a6006a;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-shadow: none;
 }
 
 @media only screen and (max-width:810px) {
@@ -282,12 +308,17 @@ export default {
   }
   .carousel-form {
     width: 90% !important;
-    height: 300px !important;
+    height: 320px !important;
   }
   .submit-button {
-    margin-bottom: 10px;
+    margin-top: 15px;
   }
-
+  .dates-link {
+    margin-top: -40px;
+  }
+  .search-link {
+    margin-top: -40px;
+  }
 
 }
 
@@ -400,6 +431,7 @@ export default {
   color: #343434;
   border: 1px solid #919191;
   padding-bottom: 20px;
+  margin-top: -5px;
 }
 
 .input-left {
