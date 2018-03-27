@@ -4,61 +4,64 @@
       Cheap flight offers**
     </h1>
 
-<div class="cards-container">
-    <div>
-      <b-card class="cards card1">
-        <div class="card-content-wrapper">
-          <div class="card-text-wrapper">
-              <p class="card-title">
-                Budapest
+    <div class="cards-container">
+        <div>
+          <b-card class="cards card1">
+            <div class="card-content-wrapper">
+              <div class="card-text-wrapper">
+                  <p class="card-title">
+                    Budapest
+                  </p>
+                <p class="card-content">
+                  from Baku**
+                </p>
+              </div>
+              <p class="price">‎​
+                €​44.99
               </p>
-            <p class="card-content">
-              from Baku**
-            </p>
-          </div>
-          <p class="price">‎​
-            €​44.99
-          </p>
+            </div>
+          </b-card>
         </div>
-      </b-card>
-    </div>
 
-    <div>
-      <b-card class="cards card2">
-        <div class="card-content-wrapper">
-          <div class="card-text-wrapper">
-              <p class="card-title">
-                Timisoara
+        <div>
+          <b-card class="cards card2">
+            <div class="card-content-wrapper">
+              <div class="card-text-wrapper">
+                  <p class="card-title">
+                    Timisoara
+                  </p>
+                <p class="card-content">
+                  from London Luton**
+                </p>
+              </div>
+              <p class="price">‎​
+                €​20.99
               </p>
-            <p class="card-content">
-              from London Luton**
-            </p>
-          </div>
-          <p class="price">‎​
-            €​20.99
-          </p>
+            </div>
+          </b-card>
         </div>
-      </b-card>
-    </div>
 
-    <div>
-      <b-card class="cards card3">
-        <div class="card-content-wrapper">
-          <div class="card-text-wrapper">
-              <p class="card-title">
-                Warsaw
+        <div>
+          <b-card class="cards card3">
+            <div class="card-content-wrapper">
+              <div class="card-text-wrapper">
+                  <p class="card-title">
+                    Warsaw
+                  </p>
+                <p class="card-content">
+                  from Malta**
+                </p>
+              </div>
+              <p class="price">‎​
+                €​39.99
               </p>
-            <p class="card-content">
-              from Malta**
-            </p>
-          </div>
-          <p class="price">‎​
-            €​39.99
-          </p>
+            </div>
+          </b-card>
         </div>
-      </b-card>
+        <div class="disclaimer-wrap">
+          <p>**One way price including taxes, administration and other non-optional charges and one hand luggage (max: 55x40x23cm). Each piece of checked-in baggage is subject to additional fees. The price applies only to bookings made on wizzair.com and the WIZZ mobile app or made by our call centre. Number of seats at indicated prices are limited.</p>
+        </div>
     </div>
-</div>
 
   </div>
 </template>
@@ -76,27 +79,31 @@ export default {
   display: flex;
   width: 100%;
   flex-direction: column;
-  max-width: 1400px;
-  padding: 0 20px;
-  margin: 0 auto;
+  max-width: 1450px;
   background-color: #f2f2f2;
-  height: 900px;
+  height: 500px;
+  margin-top: -10px !important;
 }
 
 .cards-container {
   display: flex;
   width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1400px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .title {
-  margin-top: 20px;
   font-size: 24px;
   font-weight: 300;
+  padding: 0 40px;
   color: #06038d;
-  align-self: flex-start;
   margin-bottom: 30px;
+  width: 100%;
+  margin-top: 40px;
+  text-align: left;
 }
 
 .cards {
@@ -177,6 +184,11 @@ export default {
   color: #06038d;
 }
 
+.disclaimer-wrap {
+  margin-top: 35px;
+  text-align: left;
+}
+
 @media only screen and ( max-width:1395px) {
   .cards, .card-content-wrapper {
     width: 400px;
@@ -226,10 +238,14 @@ export default {
     display: none;
   }
 
+  .disclaimer-wrap {
+    display: none;
+  }
+
   .wrapper {
     display: none;
   }
-  
+
   .title {
     display: none;
   }

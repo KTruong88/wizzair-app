@@ -4,6 +4,7 @@
     <Carousel />
     <SearchTools />
     <CheapFlight />
+    <Offers />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Navbar from './components/navbar'
 import Carousel from './components/carousel'
 import SearchTools from './components/search_tools'
 import CheapFlight from './components/cheap_flight'
+import Offers from './components/offers_section'
 
 export default {
   name: 'App',
@@ -20,6 +22,7 @@ export default {
     Carousel,
     SearchTools,
     CheapFlight,
+    Offers,
   }
 }
 </script>
