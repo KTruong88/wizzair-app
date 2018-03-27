@@ -247,7 +247,51 @@ export default {
   background-color:
 }
 
-@media only screen and (max-width:1100px) {
+@media only screen and (max-width:810px) {
+  .carousel-form {
+    flex-direction: column;
+  }
+  .buttons {
+    height: 55px;
+    width: 25%;
+  }
+  .buttons:focus {
+    box-shadow: 1px 0px 0px;
+  }
+  .side-buttons {
+    width: 100%;
+    flex-direction: row;
+  }
+  .input-half, .input4 {
+    display: none;
+  }
+  .input2 {
+    margin-bottom: -90px;
+  }
+  .bottom-wrapper {
+    display: none;
+  }
+  .hero-banner-wrap {
+    display: none;
+  }
+  .right-arrow {
+    display: none;
+  }
+  .hero-banner-wrap2 {
+    display: none;
+  }
+  .carousel-form {
+    width: 90% !important;
+    height: 300px !important;
+  }
+  .submit-button {
+    margin-bottom: 10px;
+  }
+
+
+}
+
+@media only screen and ( max-width:1100px) {
   .carousel-form {
     z-index: 1000;
     position: absolute;
@@ -259,8 +303,11 @@ export default {
     width: 40%;
     height: 423px;
   }
+  .hero-banner2 {
+    width: 100%;
+    min-width: 340px;
+  }
 }
-
 .bform {
   display: flex;
   flex-direction: column;
