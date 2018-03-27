@@ -2,18 +2,21 @@
   <div id="app">
     <Navbar />
     <Carousel />
+    <SearchTools />
   </div>
 </template>
 
 <script>
 import Navbar from './components/navbar'
 import Carousel from './components/carousel'
+import SearchTools from './components/search_tools'
 
 export default {
   name: 'App',
   components: {
     Navbar,
     Carousel,
+    SearchTools,
   }
 }
 </script>
