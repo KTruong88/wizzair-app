@@ -4,52 +4,62 @@
       Cheap flight offers**
     </h1>
 
+<div class="cards-container">
     <div>
-        <b-carousel id="carousel1"
-                    controls
-                    indicators
-                    background="#fff"
-                    :interval="0"
-                    v-model="slide"
-                    @sliding-start="onSlideStart"
-                    @sliding-end="onSlideEnd"
-        >
+      <b-card class="cards card1">
+        <div class="card-content-wrapper">
+          <div class="card-text-wrapper">
+              <p class="card-title">
+                Budapest
+              </p>
+            <p class="card-content">
+              from Baku**
+            </p>
+          </div>
+          <p class="price">‎​
+            €​44.99
+          </p>
+        </div>
+      </b-card>
+    </div>
 
-          <b-carousel-slide
-                        class="cards card1"
-          >
-            <div class="card-text-wrapper">
-              <div class="card-content-wrapper">
-                <p class="card-title">Budapest</p>
+    <div>
+      <b-card class="cards card2">
+        <div class="card-content-wrapper">
+          <div class="card-text-wrapper">
+              <p class="card-title">
+                Timisoara
+              </p>
+            <p class="card-content">
+              from London Luton**
+            </p>
+          </div>
+          <p class="price">‎​
+            €​20.99
+          </p>
+        </div>
+      </b-card>
+    </div>
 
-                <p class="card-content">
-                  from Baku**
-                </p>
-              </div>
+    <div>
+      <b-card class="cards card3">
+        <div class="card-content-wrapper">
+          <div class="card-text-wrapper">
+              <p class="card-title">
+                Warsaw
+              </p>
+            <p class="card-content">
+              from Malta**
+            </p>
+          </div>
+          <p class="price">‎​
+            €​39.99
+          </p>
+        </div>
+      </b-card>
+    </div>
+</div>
 
-            </div>
-          </b-carousel-slide>
-
-          <b-carousel-slide
-                        class="cards card2"
-          >
-
-          </b-carousel-slide>
-
-          <b-carousel-slide
-                        class="cards card3"
-          >
-
-          </b-carousel-slide>
-
-          <b-carousel-slide
-                        class="cards card4"
-          >
-
-          </b-carousel-slide>
-
-        </b-carousel>
-      </div>
   </div>
 </template>
 
@@ -70,6 +80,12 @@ export default {
   padding: 0 20px;
   margin: 0 auto;
   background-color: #f2f2f2;
+  height: 900px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .title {
@@ -87,7 +103,13 @@ export default {
   height: 250px;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 8px;
 }
+
+.cards:hover {
+  cursor: pointer;
+}
+
 .card1 {
   background-image: URL("https://wizzair.com/static/images/default-source/banner-images/bud_1_6f5475bf.jpg");
 }
@@ -105,6 +127,7 @@ export default {
 .card-text-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .card-title-wrapper {
@@ -137,15 +160,20 @@ export default {
   background-color: #fff;
   width: 442px;
   height: 100px;
-  margin-bottom: -40px;
-  margin-left: -66px;
+  margin-left: -21px;
+  margin-top: 129px;
 }
 
 .card-content {
   font-size: 14px;
-  color: #000;
   text-shadow: none;
 }
 
+.price {
+  align-self: flex-end;
+  font-size: 20px;
+  font-weight: 700;
+  color: #06038d;
+}
 
 </style>
