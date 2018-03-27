@@ -85,7 +85,9 @@ export default {
 
 .cards-container {
   display: flex;
+  width: 100%;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .title {
@@ -99,7 +101,6 @@ export default {
 
 .cards {
   max-width: 442px;
-  width: 442;
   height: 250px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -174,6 +175,64 @@ export default {
   font-size: 20px;
   font-weight: 700;
   color: #06038d;
+}
+
+@media only screen and ( max-width:1395px) {
+  .cards, .card-content-wrapper {
+    width: 400px;
+  }
+}
+
+@media only screen and ( max-width:1270px) {
+  .cards, .card-content-wrapper {
+    width: 350px;
+  }
+}
+
+@media only screen and ( max-width:1225px) {
+  .cards, .card-content-wrapper {
+    width: 320px;
+  }
+}
+
+@media only screen and ( max-width:1025px) {
+  /*.cards-container {
+    flex-direction: column;
+    align-items: center;
+  }*/
+  .card1, .card2, .card-content-wrapper {
+    width: 400px;
+  }
+
+  .card3 {
+    display: none;
+  }
+}
+
+@media only screen and ( max-width:870px) {
+  .card1, .card2, .card-content-wrapper {
+    width: 300px;
+  }
+}
+
+@media only screen and ( max-width:660px) {
+  .card1, .card2, .card-content-wrapper {
+    width: 250px;
+  }
+}
+
+@media only screen and ( max-width:550px) {
+  .card1, .card2, .card-content-wrapper {
+    display: none;
+  }
+
+  .wrapper {
+    display: none;
+  }
+  
+  .title {
+    display: none;
+  }
 }
 
 </style>
