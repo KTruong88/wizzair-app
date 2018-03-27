@@ -6,51 +6,73 @@
       </div>
       <div class="tools-content">
 
-
         <div class="content-item first">
+          <a href="" class="content-links">
             <img class="trip-img" src="https://wizzair.com/static/images/default-source/information-services-images/card-images/trip_planner_icon_e71eb2a9.png" alt="trip-planner"
             >
 
-        <div class="title-wrap">
-          <div class="title">
-            Trip Planner <span class="pill">New</span>
-          </div>
-          <p class="content">
-            Discover your new favourite place
-          </p>
-          </div>
+            <div class="title-wrap">
+              <div class="title">
+                Trip Planner <span class="pill">New</span>
+              </div>
+              <p class="content">
+                Discover your new favourite place
+              </p>
+            </div>
+          </a>
         </div>
 
         <div class="item-divider"></div>
 
         <div class="content-item second">
-          <img class="farefinder-img"       src="https://wizzair.com/static/images/default-source/information-services-images/card-images/fare-finder-icon_90c09a7a.png" alt="farefinder"
-          >
-          <div class="title-wrap">
-            <div class="title">
-              Fare Finder
+          <a href="" class="content-links" >
+            <img class="farefinder-img"       src="https://wizzair.com/static/images/default-source/information-services-images/card-images/fare-finder-icon_90c09a7a.png" alt="farefinder"
+            >
+            <div class="title-wrap">
+              <div class="title title-fare">
+                Fare Finder
+              </div>
+              <p class="content content-fare">
+                619 Routes
+              </p>
             </div>
-            <p class="content">
-              619 Routes
-            </p>
-          </div>
+          </a>
         </div>
 
         <div class="item-divider"></div>
 
         <div class="content-item third">
-          <div class="title">
+          <a href="" class="content-links">
+            <img class="map-img" src="https://wizzair.com/static/images/default-source/information-services-images/card-images/destination-map-icon_30dc26c6.png" alt="destination-map icon"
+            >
 
-          </div>
-          <p class="content"></p>
+            <div class="title-wrap">
+              <div class="title">
+                Destination Map
+              </div>
+              <p class="content">
+                146 Destinations in 44 Countries
+              </p>
+            </div>
+          </a>
         </div>
 
+        <div class="item-divider"></div>
 
         <div class="content-item fourth">
-          <div class="title">
+          <a href="" class="content-links">
+            <img class="destination" src="https://wizzair.com/static/images/default-source/information-services-images/card-images/fligts-all-destinations-icon_3f3ed902.png" alt="destination"
+            >
 
-          </div>
-          <p class="content"></p>
+            <div class="title-wrap">
+              <div class="title">
+                Destinations
+              </div>
+              <p class="content">
+                Discover our expanding network
+              </p>
+            </div>
+          </a>
         </div>
 
 
@@ -86,6 +108,12 @@ export default {
   height: 141px;
 }
 
+.content-links {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+}
+
 .heading {
   text-align: left;
   font-size: 24px;
@@ -111,6 +139,22 @@ export default {
   margin-right: 10px;
 }
 
+.map-img {
+  min-width: 100px;
+  height: 85px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.destination {
+  min-width: 100px;
+  height: 85px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 15px;
+}
+
 .content-item {
   display: flex;
   justify-content: center;
@@ -131,6 +175,7 @@ export default {
   color: #c6007e;
   text-transform: uppercase;
   align-self: flex-start;
+  font-weight: bold;
 }
 
 
@@ -160,4 +205,78 @@ export default {
   align-self: center;
 }
 
+@media only screen and (max-width:1180px) {
+  .wrapper {
+    height: 341px;
+  }
+  .heading {
+    margin-top: 10px;
+    margin-left: 65px;
+  }
+  .tools-content {
+    flex-wrap: wrap;
+  }
+  .content-item {
+    flex-basis: 50%;
+  }
+  .map-img {
+    margin-left: -10px;
+    margin-top: 30px;
+  }
+  .destination {
+    margin-left: 90px;
+    margin-top: 30px;
+  }
+  .item-divider {
+    display: none;
+  }
+
+  @media only screen and (max-width:872px) {
+    .wrapper {
+      height: 577px;
+    }
+    .heading {
+      align-self: center;
+      margin-bottom: 20px;
+    }
+    .content-item {
+      flex-basis: 100%;
+      justify-content: center;
+      margin-top: 10px;
+      min-width: 440px;
+    }
+    .trip-img {
+
+    }
+    .farefinder-img {
+      margin-top: 30px;
+    }
+    .trip-img {
+      margin-left: 78px;
+    }
+    .content-fare {
+      text-align: left;
+    }
+
+    .title {
+      margin-top: 30px;
+    }
+    .farefinder-img {
+      margin-left: -28px;
+    }
+    .map-img {
+      margin-left: 70px;
+    }
+    .destination {
+      margin-left: 70px;
+    }
+  }
+
+  @media only screen and (max-width:410px) {
+    .wrapper {
+      height: 620px;
+    }
+  }
+
+}
 </style>
