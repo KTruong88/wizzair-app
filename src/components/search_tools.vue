@@ -8,27 +8,35 @@
 
 
         <div class="content-item first">
-            <img class="first-img" src="https://wizzair.com/static/images/default-source/information-services-images/card-images/trip_planner_icon_e71eb2a9.png" alt="trip-planner"
+            <img class="trip-img" src="https://wizzair.com/static/images/default-source/information-services-images/card-images/trip_planner_icon_e71eb2a9.png" alt="trip-planner"
             >
 
-            <div class="title-wrap">
-              <div class="title">
-                Trip Planner <span class="pill">New</span>
-              </div>
-              <p class="content">
-                Discover your new favourite place
-              </p>
-            </div>
+        <div class="title-wrap">
+          <div class="title">
+            Trip Planner <span class="pill">New</span>
+          </div>
+          <p class="content">
+            Discover your new favourite place
+          </p>
+          </div>
         </div>
 
+        <div class="item-divider"></div>
 
         <div class="content-item second">
-          <div class="title">
-
+          <img class="farefinder-img"       src="https://wizzair.com/static/images/default-source/information-services-images/card-images/fare-finder-icon_90c09a7a.png" alt="farefinder"
+          >
+          <div class="title-wrap">
+            <div class="title">
+              Fare Finder
+            </div>
+            <p class="content">
+              619 Routes
+            </p>
           </div>
-          <p class="content"></p>
         </div>
 
+        <div class="item-divider"></div>
 
         <div class="content-item third">
           <div class="title">
@@ -83,6 +91,7 @@ export default {
   font-size: 24px;
   font-weight: 300;
   color: #06038d;
+  margin-bottom: 10px;
 }
 
 .tools-content {
@@ -90,16 +99,24 @@ export default {
   justify-content: center;
 }
 
-.first-img {
+.trip-img {
   min-width: 100px;
+  margin-right: 10px;
+}
+
+.farefinder-img {
+  min-width: 100px;
+  height: 65px;
+  margin-top: 10px;
   margin-right: 10px;
 }
 
 .content-item {
   display: flex;
+  justify-content: center;
   flex: 1;
   height: 97px;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 
 .title-wrap {
@@ -134,6 +151,13 @@ export default {
   margin: 0;
   font-size: 14px;
   line-height: 1;
+}
+
+.item-divider {
+  width: 1px;
+  height: 30px;
+  background-color: #e1e1e1;
+  align-self: center;
 }
 
 </style>
