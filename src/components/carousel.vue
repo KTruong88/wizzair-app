@@ -48,15 +48,57 @@
 
     <div class="side-buttons">
       <button class="buttons button1">
+        <icon name=""></icon>
+        <icon name="fighter-jet"></icon> <br>
         Flights
       </button>
-      <button class="buttons non-active-buttons">
-        Flight & Hotel
+      <button class="buttons">
+
+        <icon
+                    name="fighter-jet"
+                   class="fighter-jet-icon"
+                   style="height: 1.2rem;
+                          margin-left: 20px;
+                          margin-bottom: -16px;
+                          background-color: #6495ED;
+                          padding: 2px;
+                          border-radius: 3px;"
+          >
+        </icon>
+        <br>
+
+        <icon
+                    name="plus"
+                   class="plus-icon"
+                   style="height: .8rem;
+                          margin-top: -20px;
+                          margin-bottom: -5px;
+                          background-color: #6495ED;
+                          padding: 2px;
+                          border-radius: 3px;"
+          >
+        </icon>
+         <br>
+
+        <icon       name="bed"
+                   class="bed-icon"
+                   style="height: 1.2rem;
+                          margin-right: 20px;
+                          margin-top: -10px;
+                          background-color: #6495ED;
+                          padding: 2px;
+                          border-radius: 3px;"
+          >
+        </icon>
+         <br>
+        <p class="flight-txt">Flight & Hotel</p>
       </button>
-      <button class="buttons non-active-buttons">
+      <button class="buttons">
+        <icon name="hotel"></icon> <br>
         Hotels
       </button>
-      <button class="buttons button4 non-active-buttons">
+      <button class="buttons button4">
+        <icon name="automobile"></icon> <br>
         Cars
       </button>
     </div>
@@ -123,6 +165,16 @@ export default {
 }
 </script>
 <style scoped>
+
+.fa-icon {
+  width: auto;
+  height: 2.3em; /* or any other relative font sizes */
+  color: darkblue;
+
+  /* You would have to include the following two lines to make this work in Safari */
+  max-width: 100%;
+  max-height: 100%;
+}
 
 .slide1 {
   background-image: URL("https://wizzair.com/static/images/default-source/banner-images/shutterstock_273033479_4d42c0fe.jpg");
@@ -229,6 +281,13 @@ export default {
 .buttons {
   height: 106px;
   background-color: #E8E8E8;
+  font-size: 12px;
+  color: #919191;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .buttons:hover {
@@ -239,6 +298,7 @@ export default {
 .buttons:focus {
   box-shadow: 0 2px 3px rgba(0,0,0,.2);
   background-color: #f2f2f2;
+  color: #06038d;
 }
 
 .button1 {
@@ -271,6 +331,10 @@ export default {
   text-decoration: underline;
   text-transform: uppercase;
   text-shadow: none;
+}
+
+.flight-txt {
+  font-size: 11px;
 }
 
 @media only screen and (max-width:810px) {
@@ -318,6 +382,29 @@ export default {
   }
   .search-link {
     margin-top: -40px;
+  }
+  .fa-icon {
+    margin-bottom: -5px;
+    width: auto;
+    height: 1.3em; /* or any other relative font sizes */
+
+    /* You would have to include the following two lines to make this work in Safari */
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .fighter-jet-icon {
+    margin-left: 50px !important;
+    margin-bottom: -4px !important;
+  }
+  .plus-icon {
+    margin-bottom: 4px !important;
+  }
+  .bed-icon {
+    margin-right: 125px !important;
+    margin-bottom: 20px !important;
+  }
+  .flight-txt {
+    margin-top: -45px !important;
   }
 
 }

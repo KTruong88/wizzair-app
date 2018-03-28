@@ -145,11 +145,18 @@ export default {
   display: flex;
 }
 
+@media only screen and ( max-width:740px) {
+  .wrapper {
+    height: 350px;
+  }
+}
+
 @media only screen and (max-width:700px) {
   .wrapper {
     margin-top: 40px;
     flex-wrap: wrap;
     height: 300px;
+    margin-bottom: 180px;
   }
   .link-wrap {
     flex-basis: 100%;

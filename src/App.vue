@@ -11,6 +11,8 @@
     <ExternalFooter />
     <SitemapFooter />
     <DisclaimerFooter />
+    <CopyrightFooter />
+    <PolicyFooter />
   </div>
 </template>
 
@@ -26,6 +28,9 @@ import ContactSocials from './components/contact_socials'
 import ExternalFooter from './components/external_footer'
 import SitemapFooter from './components/sitemap_footer'
 import DisclaimerFooter from './components/disclaimer_footer'
+import CopyrightFooter from './components/copyright_footer'
+import PolicyFooter from './components/policy_footer'
+import Icon from 'vue-awesome/components/Icon'
 
 export default {
   name: 'App',
@@ -41,8 +46,12 @@ export default {
     ExternalFooter,
     SitemapFooter,
     DisclaimerFooter,
+    CopyrightFooter,
+    PolicyFooter,
+    Icon,
   }
 }
+
 </script>
 
 <style>
