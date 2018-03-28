@@ -5,11 +5,11 @@
 
       </div>
       <div class="content-wrapper">
-        <div class="title">
+        <div class="title title1">
           Need help?
         </div>
-        <div class="content">
-          <a href="">Browse our FAW to get instant answer</a>
+        <div class="content content1">
+          <a href="">Browse our FAQ to get instant answer</a>
         </div>
       </div>
     </div>
@@ -33,7 +33,15 @@
     </div>
 
     <div class="box, box3">
-
+      <div class="title">
+        Never miss a good deal
+      </div>
+      <div class="content content3">
+        Subscribe to our newsletter and be the first to know about new routes and special offers.
+      </div>
+      <button class="subscribe-btn">
+        Subscribe
+      </button>
     </div>
   </div>
 </template>
@@ -54,7 +62,7 @@ export default {
   flex: 1;
 }
 
-.box1, .box2 {
+.box1, .box2, .box3 {
   display: flex;
   height: 140px;
   margin-top: -300px;
@@ -64,9 +72,9 @@ export default {
 }
 
 .content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  text-align: left;
+  margin-left: 120px;
+  margin-top: -112px;
 }
 
 .box1-img {
@@ -88,11 +96,12 @@ export default {
   color: #a6006a;
   text-decoration: underline;
   cursor: pointer;
+  text-align: left;
 }
 
 /* Middle Box */
 
-.box2 {
+.box1, .box2, .box3 {
   height: 140px;
   width: 459px;
 }
@@ -100,6 +109,10 @@ export default {
 .content2 {
   margin-top: -15px;
   text-align: left;
+}
+
+.content2, .content3 {
+  line-height: 20px;
 }
 
 .box2-img-wrapper {
@@ -125,5 +138,75 @@ export default {
   background-image: URL("https://wizzair.com/static/images/default-source/information-services-images/card-images/badge-google-play_9647fa2e.png");
 }
 
+.subscribe-btn {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 20px;
+  min-width: 150px;
+  padding: 15px 20px;
+  font-size: 14px;
+  background-color: #c6007e;
+  font-family: P22 Underground Pro,sans-serif;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: normal;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 3px;
+}
 
+.box3 {
+  border-right: none;
+}
+
+.content3 {
+  text-align: left;
+}
+
+@media only screen and ( max-width:1155px) {
+  .wrapper {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and ( max-width:1035px) {
+  .box1-img {
+    background-size: 80%;
+    background-repeat: no-repeat;
+  }
+
+  .title {
+    text-align: left;
+  }
+}
+
+@media only screen and ( max-width:831px) {
+  .wrapper {
+    flex-wrap: wrap;
+  }
+  .box {
+    flex-basis: 100%;
+  }
+  .box1-img {
+    background-size: 100%;
+  }
+  .box1, .box2 {
+    border-right: none;
+    border-right: 0;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .box1 {
+    margin-top: -650px;
+  }
+  .box2 {
+    margin-top: -500px;
+    padding-botom: 20px;
+    height: 180px;
+  }
+}
+
+@media only screen and ( max-width:700px) {
+  
+}
 </style>

@@ -170,10 +170,13 @@ export default {
   .card {
     margin-top: 160px;
   }
+  .wrapper {
+    height: 910px;
+  }
 }
 
 @media only screen and (max-width:500px) {
-  .title, .card, .wrapper {
+  .title, .card, {
     display: none;
   }
 
