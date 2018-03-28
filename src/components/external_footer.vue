@@ -61,11 +61,23 @@ export default {
   color: #919191;
   text-decoration: none;
   font-size: 14px;
+  text-align: left;
 }
 
 .link:hover {
   cursor: pointer;
 }
 
+@media only screen and ( max-width:700px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media only screen and ( max-width:500px) {
+  .header, .content-wrapper {
+    display: none;
+  }
+}
 
 </style>

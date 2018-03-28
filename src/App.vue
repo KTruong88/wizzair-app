@@ -9,6 +9,8 @@
     <Opportunity />
     <ContactSocials />
     <ExternalFooter />
+    <SitemapFooter />
+    <DisclaimerFooter />
   </div>
 </template>
 
@@ -22,6 +24,8 @@ import OffersBottom from './components/offers_section_bottom'
 import Opportunity from './components/opportunity'
 import ContactSocials from './components/contact_socials'
 import ExternalFooter from './components/external_footer'
+import SitemapFooter from './components/sitemap_footer'
+import DisclaimerFooter from './components/disclaimer_footer'
 
 export default {
   name: 'App',
@@ -35,6 +39,8 @@ export default {
     Opportunity,
     ContactSocials,
     ExternalFooter,
+    SitemapFooter,
+    DisclaimerFooter,
   }
 }
 </script>
