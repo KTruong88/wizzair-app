@@ -6,6 +6,7 @@
     <CheapFlight />
     <OffersTop />
     <OffersBottom />
+    <Opportunity />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import SearchTools from './components/search_tools'
 import CheapFlight from './components/cheap_flight'
 import OffersTop from './components/offers_section_top'
 import OffersBottom from './components/offers_section_bottom'
+import Opportunity from './components/opportunity'
 
 export default {
   name: 'App',
@@ -26,6 +28,7 @@ export default {
     CheapFlight,
     OffersTop,
     OffersBottom,
+    Opportunity,
   }
 }
 </script>

@@ -168,7 +168,7 @@ strong {
   .top-right-wrapper {
     margin-top: 180px;
     margin-bottom: 80px;
-    
+
   }
 
   .banner1, .banner2, .banner3, .banner4 {
@@ -180,6 +180,12 @@ strong {
   }
   .banner-wrap {
     flex-direction: column;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .banner, .content, .title, .banner2, .wrapper {
+    display: none;
   }
 }
 </style>

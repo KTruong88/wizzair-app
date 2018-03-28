@@ -247,13 +247,15 @@ export default {
     margin-bottom: 100px;
   }
 
-
-
   .wrapper {
     height: 1500px;
   }
+}
 
-
+@media only screen and (max-width:500px) {
+  .box, .content, .wrapper {
+    display: none;
+  }
 }
 
 </style>

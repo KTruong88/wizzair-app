@@ -274,7 +274,8 @@ export default {
 
   @media only screen and (max-width:410px) {
     .wrapper {
-      height: 620px;
+      /*height: 620px;*/
+      display: none;
     }
   }
 
