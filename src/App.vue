@@ -4,7 +4,8 @@
     <Carousel />
     <SearchTools />
     <CheapFlight />
-    <Offers />
+    <OffersTop />
+    <OffersBottom />
   </div>
 </template>
 
@@ -13,7 +14,8 @@ import Navbar from './components/navbar'
 import Carousel from './components/carousel'
 import SearchTools from './components/search_tools'
 import CheapFlight from './components/cheap_flight'
-import Offers from './components/offers_section'
+import OffersTop from './components/offers_section_top'
+import OffersBottom from './components/offers_section_bottom'
 
 export default {
   name: 'App',
@@ -22,7 +24,8 @@ export default {
     Carousel,
     SearchTools,
     CheapFlight,
-    Offers,
+    OffersTop,
+    OffersBottom,
   }
 }
 </script>

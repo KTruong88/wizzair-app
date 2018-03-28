@@ -53,7 +53,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 600px;
+  height: 210px;
   background-color: #f2f2f2;
   padding: 0 20px;
   margin: 0 auto;
@@ -98,10 +98,14 @@ export default {
 }
 .banner1 {
   background-image: URL("https://wizzair.com/static/images/default-source/banner-images/3rd-party-banners/booking_com_ccd40dc0.jpg");
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 .banner3 {
   background-image: URL("https://wizzair.com/static/images/default-source/banner-images/3rd-party-banners/car-rental_c9015673.jpg");
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 .banner2, .banner4 {
@@ -111,6 +115,8 @@ export default {
   height: 140px;
   width: 338px;
   background-color: #fff;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .banner2-title, .banner4-title {
@@ -139,5 +145,41 @@ export default {
 
 strong {
   color: #c6007e;
+}
+
+@media only screen and (max-width:830px) {
+  .title {
+    margin-top: 30px;
+    margin-bottom: 110px;
+  }
+
+  .top-left-wrapper, .top-right-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .top-left-wrapper, .top-right-wrapper {
+    width: 100%;
+  }
+
+  .top-left-wrapper {
+    margin-top: 30px;
+  }
+
+  .top-right-wrapper {
+    margin-top: 180px;
+    margin-bottom: 80px;
+    
+  }
+
+  .banner1, .banner2, .banner3, .banner4 {
+    width: 50%;
+  }
+
+  .banner {
+
+  }
+  .banner-wrap {
+    flex-direction: column;
+  }
 }
 </style>

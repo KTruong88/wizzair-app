@@ -208,10 +208,6 @@ export default {
 }
 
 @media only screen and ( max-width:1025px) {
-  /*.cards-container {
-    flex-direction: column;
-    align-items: center;
-  }*/
   .card1, .card2, .card-content-wrapper {
     width: 400px;
   }
