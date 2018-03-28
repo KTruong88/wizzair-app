@@ -8,6 +8,7 @@
     <OffersBottom />
     <Opportunity />
     <ContactSocials />
+    <ExternalFooter />
   </div>
 </template>
 
@@ -20,6 +21,7 @@ import OffersTop from './components/offers_section_top'
 import OffersBottom from './components/offers_section_bottom'
 import Opportunity from './components/opportunity'
 import ContactSocials from './components/contact_socials'
+import ExternalFooter from './components/external_footer'
 
 export default {
   name: 'App',
@@ -32,6 +34,7 @@ export default {
     OffersBottom,
     Opportunity,
     ContactSocials,
+    ExternalFooter,
   }
 }
 </script>
