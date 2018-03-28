@@ -1,87 +1,88 @@
 <template>
-  <div class="wrapper">
-    <div class="col col1">
-      <div class="title">
-        Services
-      </div>
-
-      <div class="link-wrap">
-        <a href="">WIZZ Discount Club</a>
-        <a href="">WIZZ Flex</a>
-        <a href="">WIZZ Priority</a>
-        <a href="">Seat allocation</a>
-        <a href="">Hotels</a>
-        <a href="">Car rentals</a>
-        <a href="">Airport transfer</a>
-        <a href="">All services and fees</a>
-      </div>
-    </div>
-
-    <div class="col col2">
-      <div class="title">
-        Customer Service
-      </div>
-      <div class="link-wrap">
-        <a href="">Booking with Wizz Air</a>
-        <a href="">Baggage</a>
-        <a href="">Payments</a>
-        <a href="">Special Assistance</a>
-        <a href="">Online check-in</a>
-        <a href="">General Conditions of Carriage</a>
-      </div>
-    </div>
-
-    <div class="col col3">
-      <div class="title">
-        Flights & Destinations
-      </div>
-      <div class="link-wrap">
-        <a href="">Current Flight Status</a>
-        <a href="">Map</a>
-        <a href="">Destinations</a>
-        <a href="">Timetable</a>
-        <a href="">Cancellation information</a>
-      </div>
-      <div class="social-media-icons">
-        <div class="social-title">
-          Follow us
+  <div class="responsive-wrap">
+    <div class="wrapper">
+      <div class="col col1">
+        <div class="title">
+          Services
         </div>
 
-        <div class="icon-wrapper">
-          <div class="icon icon1">
+        <div class="link-wrap">
+          <a href="">WIZZ Discount Club</a>
+          <a href="">WIZZ Flex</a>
+          <a href="">WIZZ Priority</a>
+          <a href="">Seat allocation</a>
+          <a href="">Hotels</a>
+          <a href="">Car rentals</a>
+          <a href="">Airport transfer</a>
+          <a href="">All services and fees</a>
+        </div>
+      </div>
 
+      <div class="col col2">
+        <div class="title">
+          Customer Service
+        </div>
+        <div class="link-wrap">
+          <a href="">Booking with Wizz Air</a>
+          <a href="">Baggage</a>
+          <a href="">Payments</a>
+          <a href="">Special Assistance</a>
+          <a href="">Online check-in</a>
+          <a href="">General Conditions of Carriage</a>
+        </div>
+      </div>
+
+      <div class="col col3">
+        <div class="title">
+          Flights & Destinations
+        </div>
+        <div class="link-wrap">
+          <a href="">Current Flight Status</a>
+          <a href="">Map</a>
+          <a href="">Destinations</a>
+          <a href="">Timetable</a>
+          <a href="">Cancellation information</a>
+        </div>
+        <div class="social-media-icons">
+          <div class="social-title">
+            Follow us
           </div>
-          <div class="icon icon2">
 
-          </div>
-          <div class="icon icon3">
+          <div class="icon-wrapper">
+            <div class="icon icon1">
 
-          </div>
-          <div class="icon icon4">
+            </div>
+            <div class="icon icon2">
 
-          </div>
-          <div class="icon icon5">
+            </div>
+            <div class="icon icon3">
 
+            </div>
+            <div class="icon icon4">
+
+            </div>
+            <div class="icon icon5">
+
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="col col4">
-      <div class="title">
-        About Wizz Air
-      </div>
-      <div class="link-wrap">
-        <a href="">Company information</a>
-        <a href="">News</a>
-        <a href="">WIZZ Magazine</a>
-        <a href="">Career</a>
-        <a href="">Press Office</a>
-        <a href="">For travel agents & partners</a>
+      <div class="col col4">
+        <div class="title">
+          About Wizz Air
+        </div>
+        <div class="link-wrap">
+          <a href="">Company information</a>
+          <a href="">News</a>
+          <a href="">WIZZ Magazine</a>
+          <a href="">Career</a>
+          <a href="">Press Office</a>
+          <a href="">For travel agents & partners</a>
+        </div>
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -91,10 +92,18 @@ export default {
 
 <style scoped>
 
+.responsive-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
 .wrapper {
+  width: 100%;
+  max-width: 1400px;
   height: 259px;
   display: flex;
-  background-color: #f2f2f2;
 }
 
 .col {

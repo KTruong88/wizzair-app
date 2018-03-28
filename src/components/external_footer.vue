@@ -1,22 +1,24 @@
 <template>
-  <div class="wrapper">
+  <div class="responsive-wrap">
+    <div class="wrapper">
 
-    <div class="header">
-      Airports and Tourism
+      <div class="header">
+        Airports and Tourism
+      </div>
+
+      <div class="content-wrapper">
+        <div class="link link1">
+          Visit Catania
+        </div>
+        <div class="link link2">
+          Visit Tel Aviv from Debrecen
+        </div>
+        <div class="link link3">
+          Visit Cyprus
+        </div>
+      </div>
+
     </div>
-
-    <div class="content-wrapper">
-      <div class="link link1">
-        Visit Catania
-      </div>
-      <div class="link link2">
-        Visit Tel Aviv from Debrecen
-      </div>
-      <div class="link link3">
-        Visit Cyprus
-      </div>
-    </div>
-
   </div>
 </template>
 
@@ -27,12 +29,21 @@ export default {
 
 <style scoped>
 
+.responsive-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .wrapper {
   display: flex;
+  max-width: 1400px;
+  width: 100%;
   flex-direction: column;
   background-color: #fff;
   height: 127px;
   margin: 0 40px;
+  padding: 0 20px;
 }
 
 .header {

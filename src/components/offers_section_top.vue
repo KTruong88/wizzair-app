@@ -79,6 +79,8 @@ export default {
 
 .banner-wrap {
   width: 100%;
+  max-width: 1400px;
+  align-self: center;
   display: flex;
   justify-content: space-between;
   padding-left: 20px;

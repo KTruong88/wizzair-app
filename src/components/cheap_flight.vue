@@ -1,10 +1,10 @@
 <template>
   <div class="wrapper">
-    <h1 class="title">
-      Cheap flight offers**
-    </h1>
 
     <div class="cards-container">
+      <h1 class="title">
+        Cheap flight offers**
+      </h1>
         <div>
           <b-card class="cards card1">
             <div class="card-content-wrapper">
@@ -79,7 +79,6 @@ export default {
   display: flex;
   width: 100%;
   flex-direction: column;
-  max-width: 1450px;
   background-color: #f2f2f2;
   height: 500px;
   margin-top: -10px !important;
@@ -98,7 +97,6 @@ export default {
 .title {
   font-size: 24px;
   font-weight: 300;
-  padding: 0 40px;
   color: #06038d;
   margin-bottom: 30px;
   width: 100%;

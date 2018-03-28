@@ -1,47 +1,49 @@
 <template>
-  <div class="wrapper">
-    <div class="box, box1">
-      <div class="box1-img">
-
-      </div>
-      <div class="content-wrapper">
-        <div class="title title1">
-          Need help?
-        </div>
-        <div class="content content1">
-          <a href="">Browse our FAQ to get instant answer</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="box, box2">
-      <div class="title">
-        On the move?
-      </div>
-      <div class="content content2">
-        Booking a cheap Wizz Air flight ticket has never been so
-        easy as with our FREE mobile application.
-      </div>
-      <div class="box2-img-wrapper">
-        <div class="box2-img box2-img1">
+  <div class="responsive-wrap">
+    <div class="wrapper">
+      <div class="box, box1">
+        <div class="box1-img">
 
         </div>
-        <div class="box2-img box2-img2">
-
+        <div class="content-wrapper">
+          <div class="title title1">
+            Need help?
+          </div>
+          <div class="content content1">
+            <a href="">Browse our FAQ to get instant answer</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="box, box3">
-      <div class="title">
-        Never miss a good deal
+      <div class="box, box2">
+        <div class="title">
+          On the move?
+        </div>
+        <div class="content content2">
+          Booking a cheap Wizz Air flight ticket has never been so
+          easy as with our FREE mobile application.
+        </div>
+        <div class="box2-img-wrapper">
+          <div class="box2-img box2-img1">
+
+          </div>
+          <div class="box2-img box2-img2">
+
+          </div>
+        </div>
       </div>
-      <div class="content content3">
-        Subscribe to our newsletter and be the first to know about new routes and special offers.
+
+      <div class="box, box3">
+        <div class="title">
+          Never miss a good deal
+        </div>
+        <div class="content content3">
+          Subscribe to our newsletter and be the first to know about new routes and special offers.
+        </div>
+        <button class="subscribe-btn">
+          Subscribe
+        </button>
       </div>
-      <button class="subscribe-btn">
-        Subscribe
-      </button>
     </div>
   </div>
 </template>
@@ -53,9 +55,18 @@ export default {
 
 <style scoped>
 
+.responsive-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .wrapper {
   display: flex;
   margin: 0 40px;
+  width: 100%;
+  max-width: 1400px;
+  align-self: center;
 }
 
 .box {

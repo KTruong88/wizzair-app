@@ -1,4 +1,5 @@
 <template>
+<div class="responsive-wrap">
   <div class="wrapper">
 
     <div class="box-wrap box-wrap1">
@@ -59,6 +60,7 @@
     </div>
 
   </div>
+</div>
 </template>
 
 <script>
@@ -68,14 +70,20 @@ export default {
 
 <style scoped>
 
+.responsive-wrap {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
 .wrapper {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  max-width: 1400px;
   flex-wrap: wrap;
   height: 510px;
   background-color: #f2f2f2;
-  padding: 0 40px;
+  padding: 0 20px;
   margin: 0 auto;
 
 }

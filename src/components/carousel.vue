@@ -44,104 +44,105 @@
 
 <!-- Carousel form -->
 
-  <div class="carousel-form">
+      <div class="carousel-form">
 
-    <div class="side-buttons">
-      <button class="buttons button1">
-        <icon name=""></icon>
-        <icon name="fighter-jet"></icon> <br>
-        Flights
-      </button>
-      <button class="buttons">
+        <div class="side-buttons" v-on:click="nextSlide()">
+          <button class="buttons button1">
+            <icon name="fighter-jet"></icon> <br>
+            Flights
+          </button>
+          <button class="buttons">
 
-        <icon
-                    name="fighter-jet"
-                   class="fighter-jet-icon"
-                   style="height: 1.2rem;
-                          margin-left: 20px;
-                          margin-bottom: -16px;
-                          background-color: #6495ED;
-                          padding: 2px;
-                          border-radius: 3px;"
-          >
-        </icon>
-        <br>
+            <icon
+                        name="fighter-jet"
+                       class="fighter-jet-icon"
+                       style="height: 1.2rem;
+                              margin-left: 20px;
+                              margin-bottom: -16px;
+                              background-color: #6495ED;
+                              padding: 2px;
+                              border-radius: 3px;"
+              >
+            </icon>
+            <br>
 
-        <icon
-                    name="plus"
-                   class="plus-icon"
-                   style="height: .8rem;
-                          margin-top: -20px;
-                          margin-bottom: -5px;
-                          background-color: #6495ED;
-                          padding: 2px;
-                          border-radius: 3px;"
-          >
-        </icon>
-         <br>
+            <icon
+                        name="plus"
+                       class="plus-icon"
+                       style="height: .8rem;
+                              margin-top: -20px;
+                              margin-bottom: -5px;
+                              background-color: #6495ED;
+                              padding: 2px;
+                              border-radius: 3px;"
+              >
+            </icon>
+             <br>
 
-        <icon       name="bed"
-                   class="bed-icon"
-                   style="height: 1.2rem;
-                          margin-right: 20px;
-                          margin-top: -10px;
-                          background-color: #6495ED;
-                          padding: 2px;
-                          border-radius: 3px;"
-          >
-        </icon>
-         <br>
-        <p class="flight-txt">Flight & Hotel</p>
-      </button>
-      <button class="buttons">
-        <icon name="hotel"></icon> <br>
-        Hotels
-      </button>
-      <button class="buttons button4">
-        <icon name="automobile"></icon> <br>
-        Cars
-      </button>
-    </div>
-
-    <b-form class="bform">
-      <div class="top-wrapper">
-        <b-form-input class="input input1" type="text" placeholder="Origin">
-        </b-form-input>
-
-        <div class="arrow_box">
-
+            <icon       name="bed"
+                       class="bed-icon"
+                       style="height: 1.2rem;
+                              margin-right: 20px;
+                              margin-top: -10px;
+                              background-color: #6495ED;
+                              padding: 2px;
+                              border-radius: 3px;"
+              >
+            </icon>
+             <br>
+            <p class="flight-txt">Flight & Hotel</p>
+          </button>
+          <button class="buttons">
+            <icon name="hotel"></icon> <br>
+            Hotels
+          </button>
+          <button class="buttons button4">
+            <icon name="automobile"></icon> <br>
+            Cars
+          </button>
         </div>
 
-        <b-form-input class="input input2" type="text" placeholder="Destination">
-        </b-form-input>
+        <b-form class="bform">
+          <div class="top-wrapper">
+            <b-form-input class="input input1" type="text" placeholder="Origin">
+            </b-form-input>
 
-      </div>
+            <div class="arrow_box">
 
-      <div class="top-wrapper bottom-wrapper">
+            </div>
 
-        <div class="input-wrap">
-          <input type="text" class="input-half input-left" placeholder="DEPARTURE">
-
-          <div class="right-arrow">
+            <b-form-input class="input input2" type="text" placeholder="Destination">
+            </b-form-input>
 
           </div>
-          <input type="text" class="input-half input-right" placeholder="RETURN">
-        </div>
-        <b-form-input class="input input4" placeholder="PASSENGERS">
 
-        </b-form-input>
-        <button class="submit-button">
-          Search
-        </button>
+          <div class="top-wrapper bottom-wrapper">
 
-        <div class="links-container">
-          <a href="" class="dates-link">Flexible on Dates?</a>
-          <a href="" class="search-link"> New Search</a>
-        </div>
+            <div class="input-wrap">
+              <input type="text" class="input-half input-left" placeholder="DEPARTURE">
 
+              <div class="right-arrow">
+
+              </div>
+              <input type="text" class="input-half input-right" placeholder="RETURN">
+            </div>
+            <b-form-input class="input input4" placeholder="PASSENGERS">
+
+            </b-form-input>
+            <button class="submit-button">
+              Search
+            </button>
+
+            <div class="links-container">
+              <a href="" class="dates-link">Flexible on Dates?</a>
+              <a href="" class="search-link"> New Search</a>
+            </div>
+
+          </div>
+        </b-form>
       </div>
-    </b-form>
-  </div>
+
+
 </b-carousel>
 </div>
 </template>
@@ -160,6 +161,9 @@ export default {
     },
     onSlideEnd (slide) {
       this.sliding = false
+    },
+    nextSlide() {
+      this.slide += 1
     }
   }
 }

@@ -1,44 +1,46 @@
 <template>
-  <div class="wrapper">
-    <h1 class="title-wrap">
-      <p class="title">Welcome to the world of opportunity</p>
-    </h1>
+  <div class="responsive-wrap">
+    <div class="wrapper">
+      <h1 class="title-wrap">
+        <p class="title">Welcome to the world of opportunity</p>
+      </h1>
 
-    <div class="card-wrapper">
-      <div class="card card1">
-        <div class="icon-wrapper icon-wrapper1">
+      <div class="card-wrapper">
+        <div class="card card1">
+          <div class="icon-wrapper icon-wrapper1">
 
+          </div>
+          <div class="card-title">
+            News
+          </div>
+          <p class="content">
+            Check out the latest company news
+          </p>
         </div>
-        <div class="card-title">
-          News
-        </div>
-        <p class="content">
-          Check out the latest company news
-        </p>
-      </div>
 
-      <div class="card card2">
-        <div class="icon-wrapper icon-wrapper2">
+        <div class="card card2">
+          <div class="icon-wrapper icon-wrapper2">
 
+          </div>
+          <div class="card-title">
+            Your Career
+          </div>
+          <p class="content">
+            Check out our open positions and apply now!
+          </p>
         </div>
-        <div class="card-title">
-          Your Career
-        </div>
-        <p class="content">
-          Check out our open positions and apply now!
-        </p>
-      </div>
 
-      <div class="card card3">
-        <div class="icon-wrapper icon-wrapper3">
+        <div class="card card3">
+          <div class="icon-wrapper icon-wrapper3">
 
+          </div>
+          <div class="card-title">
+            The Freedom of Choice
+          </div>
+          <p class="content">
+            From travelling light to all-in flexibility.
+          </p>
         </div>
-        <div class="card-title">
-          The Freedom of Choice
-        </div>
-        <p class="content">
-          From travelling light to all-in flexibility.
-        </p>
       </div>
     </div>
   </div>
@@ -51,13 +53,17 @@ export default {
 
 <style scoped>
 
+.responsive-wrap {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 1400px;
   height: 400px;
-  background-color: #f2f2f2;
-  padding: 0 20px;
   margin: 0 auto;
 }
 
