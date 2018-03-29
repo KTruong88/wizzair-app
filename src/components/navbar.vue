@@ -119,9 +119,7 @@
                 </div>
               </div>
             </b-col>
-          </b-row>
 
-          <b-row>
             <b-col class="box box4" cols="4">
               <div class="box-img box-img4">
 
@@ -228,9 +226,8 @@
                   </div>
                 </div>
               </b-col>
-            </b-row>
 
-            <b-row>
+
               <b-col class="box box10" cols="4">
                 <div class="box-img box-img10">
 
@@ -269,18 +266,180 @@
 
 <!-- *******************Information Modal******************** -->
 
-    <div v-if="modal == 1" >
-      <div class="info-modal">
+<div v-if="modal == 1" class="plan-modal-wrapper">
+  <div class="plan-modal">
 
+    <div class="title-wrap info-title-wrap">
+      <div class="modal-title info-modal-title">
+        Information & Services
+      </div>
+      <div class="close-icon-div" v-on:click="closePlan()">
+        <icon name="close" class="close-icon"></icon>
+      </div>
+    </div>
 
-        <div class="info-title-wrap">
-          <div class="info-modal-title">
-            asdfsd
-          </div>
-          <div class="info-close" v-on:click="closeInfo()">
-            <icon name="close" class="info-close-icon"></icon>
-          </div>
+    <b-row class="info-row info-row-top">
+      <b-col class="info-box info-box1" cols="3">
+        <div class="info-box-title">
+          Booking Information
         </div>
+
+        <div class="info-box-content">
+          <ul class="info-box-list">
+            <li>How to book</li>
+            <li>Children and infants</li>
+            <li>Payments</li>
+            <li>Check-in and boarding</li>
+            <li>Changing your reservation</li>
+            <li>Group bookings</li>
+            <li>Mobile</li>
+          </ul>
+        </div>
+      </b-col>
+
+      <b-col class="info-box info-box2" cols="3">
+        <div class="info-box-title">
+          Prices & Discounts
+        </div>
+
+        <div class="info-box-content">
+          <ul class="info-box-list">
+            <li>Fare Finder</li>
+            <li>Fares & Bundles</li>
+            <li>All service & fees</li>
+            <li>Refunds and Compensations</li>
+            <li>Billing guide</li>
+            <li>Baggage fee calculator</li>
+          </ul>
+        </div>
+      </b-col>
+
+      <b-col class="info-box info-box3" cols="3">
+        <div class="info-box-title">
+          Wizz Services
+        </div>
+
+        <div class="info-box-content">
+          <ul class="info-box-list">
+            <li>Convenience options</li>
+            <li>WIZZ Discount Club</li>
+            <li>Fare Lock</li>
+            <li>Privilege Pass</li>
+            <li>WIZZ Priority</li>
+            <li>WIZZ Flex</li>
+            <li>On-time Guarantee</li>
+            <li>WIZZ for families</li>
+            <li>WIZZ Account</li>
+            <li>Gift Voucher</li>
+            <li>Flexile travel partner</li>
+          </ul>
+        </div>
+      </b-col>
+
+      <b-col class="info-box info-box4" cols="3">
+        <div class="info-box-title">
+          About Us
+        </div>
+
+        <div class="info-box-content">
+          <ul class="info-box-list">
+            <li>Company Information</li>
+            <li>News</li>
+            <li>Investor relations</li>
+            <li>Press Office</li>
+            <li>WIZZ Magazine</li>
+            <li>General Conditions of Carriage</li>
+            <li>Privacy policy</li>
+          </ul>
+        </div>
+      </b-col>
+    </b-row>
+
+    <b-row class="info-row">
+      <b-col class="info-box info-box5" cols="3">
+        <div class="info-box-title">
+          Travel Information
+        </div>
+
+        <div class="info-box-content">
+          <ul class="info-box-list">
+            <li>Baggage</li>
+            <li>Electronic devices on board</li>
+            <li>Seat allocation</li>
+            <li>Travel documents</li>
+            <li>Onboard services</li>
+            <li>Travelling with infants and babies</li>
+            <li>Cancellation information</li>
+          </ul>
+        </div>
+      </b-col>
+
+        <b-col class="info-box info-box6" cols="3">
+          <div class="info-box-title">
+            Flight Status
+          </div>
+
+          <div class="info-box-content">
+            <ul class="info-box-list">
+              <li>Current flight status</li>
+            </ul>
+            <br>
+          <div class="info-box-title">
+            FAQ
+          </div>
+          <ul class="info-box-list">
+            <li>Frequently Asked Questions</li>
+          </ul>
+          </div>
+        </b-col>
+
+        <b-col class="info-box info-box7" cols="3">
+          <div class="info-box-title">
+            Partner Services
+          </div>
+
+          <div class="info-box-content">
+            <ul class="info-box-list">
+              <li>Travel Insurance</li>
+              <li>Hotels</li>
+              <li>Car rental</li>
+              <li>Airport Parking</li>
+              <li>Airport Transfer</li>
+              <li>WIZZ Credit Card</li>
+              <li>Partner services</li>
+            </ul>
+          </div>
+        </b-col>
+
+        <b-col class="info-box info-box7" cols="3">
+          <div class="info-box-title">
+            Career
+          </div>
+
+          <div class="info-box-content">
+            <ul class="info-box-list">
+              <li>Work with Us</li>
+              <li>Pilots</li>
+              <li>Cabin crew/Flight attendant</li>
+              <li>Office and Maintenance Positions</li>
+            </ul>
+            <br>
+
+            <div class="info-box-title">
+              Contact
+            </div>
+            <ul class="info-box-list">
+              <li>Contact us</li>
+            </ul>
+          </div>
+        </b-col>
+      </b-row>
+    </div>
+  </div>
+
+
+
+
 
 
       </div>
@@ -343,7 +502,7 @@ export default {
   max-width: 1445px;
   align-self: center;
   flex-direction: column;
-  height: 100vh;
+  height: 120vh;
   background-color: #fff;
 }
 
@@ -501,21 +660,48 @@ export default {
   background-color: #fff;
 }
 
-/*.info-title-wrap {
-
+.info-title-wrap {
+  border-bottom: none !important;
+  margin-bottom: 25px;
 }
 
-.info-modal-title {
-
+.info-box {
+  display: flex;
+  flex-direction: column;
 }
 
-.info-close {
-
+.info-box-title {
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #343434;
+  text-align: left;
 }
 
-.info-close-icon {
+.info-box-list {
+  overflow: visible;
+  line-height: 1.75;
+  color: #c6007e;
+  text-decoration: none;
+  white-space: normal;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  vertical-align: baseline;
+  list-style: none;
+  text-align: left;
+}
 
-}*/
+.info-row {
+  margin: 0 25px;
+}
+
+.info-row-top {
+  margin-bottom: 40px;
+}
+
 
 
 
@@ -589,5 +775,63 @@ export default {
   height: 5px;
   background-image: url('http://www.w3.org/2000/svg');
 }
+
+@media only screen and (max-width:1000px) {
+
+  .title-wrap {
+    margin-top: 30px;
+    padding-bottom: 30px;
+  }
+  .modal-title {
+    text-align: left;
+  }
+  .plan-modal {
+    height: 1300px;
+  }
+  .row {
+    flex-wrap: wrap;
+  }
+  .col-4 {
+    max-width: 50%;
+  }
+  .box {
+    flex-basis: 50%;
+  }
+}
+
+@media only screen and (max-width:700px) {
+
+  .plan-modal-wrapper {
+    height: 5200px;
+  }
+  .title-wrap {
+    margin-top: 35px;
+    padding-bottom: 35px;
+  }
+  .modal-title {
+    text-align: left;
+  }
+  .plan-modal {
+    height: 1850px;
+  }
+  .col-4 {
+    max-width: 100%;
+  }
+  .box {
+    flex-basis: 100%;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  .plan-modal {
+    height: 2200px;
+  }
+  .title-wrap {
+    margin-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+
 
 </style>
