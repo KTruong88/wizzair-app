@@ -14,15 +14,18 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav type="light" class="ml-auto">
 
-          <b-nav-item class="nav-item padding"     v-on:click="openPlan()">
+          <b-nav-item class="nav-item padding"          v-on:click="openPlan()">
             Plan
+            <span class="arrow"></span>
           </b-nav-item>
 
           <b-nav-item class="item-divider">
           </b-nav-item>
 
-          <b-nav-item class="nav-item padding" right>
+          <b-nav-item class="nav-item padding" right
+            v-on:click="openInfo()">
             Information
+            <span class="arrow"></span>
           </b-nav-item>
 
           <b-nav-item class="item-divider">
@@ -43,7 +46,9 @@
           </b-nav-item>
 
           <b-nav-item right>
-            <span class="flag padding"></span>English
+            <span class="flag padding"></span>
+            English
+            <span class="arrow"></span>
           </b-nav-item>
         </b-navbar-nav>
 
@@ -51,8 +56,10 @@
       </b-navbar>
     </div>
 
-    <div>
-      <div v-if="plan" class="plan-modal-wrapper">
+<!-- *******************Plan Modal******************** -->
+
+
+      <div v-if="modal == 0" class="plan-modal-wrapper">
         <div class="plan-modal">
 
           <div class="title-wrap">
@@ -164,7 +171,118 @@
               </b-col>
             </b-row>
 
+
+
+
+            <div class="title-wrap">
+              <div class="modal-title">
+                Organize your whole holiday easily
+              </div>
+            </div>
+
+            <b-row>
+              <b-col class="box box7" cols="4">
+                <div class="box-img box-img7">
+
+                </div>
+                <div class="content-wrap">
+                  <div class="content">
+                    <p class="box-title">
+                      Flight + Hotel
+                    </p>
+                    <p class="box-content">
+                      Book flights and hotels together with Wizz Tours and save time and money on your perfect getaway.
+                    </p>
+                  </div>
+                </div>
+              </b-col>
+
+              <b-col class="box box8" cols="4">
+                <div class="box-img box-img8">
+
+                </div>
+                <div class="content-wrap">
+                  <div class="content">
+                    <p class="box-title">
+                      Hotels
+                    </p>
+                    <p class="box-content">
+                      Reserve your hotel with Booking.com and get 10% of your booking value back as WIZZ credit.
+                    </p>
+                  </div>
+                </div>
+              </b-col>
+
+              <b-col class="box box9" cols="4">
+                <div class="box-img box-img9">
+
+                </div>
+                <div class="content-wrap">
+                  <div class="content">
+                    <p class="box-title">
+                      Cars
+                    </p>
+                    <p class="box-content">
+                      Rent a car with Rentalcars.com
+                    </p>
+                  </div>
+                </div>
+              </b-col>
+            </b-row>
+
+            <b-row>
+              <b-col class="box box10" cols="4">
+                <div class="box-img box-img10">
+
+                </div>
+                <div class="content-wrap">
+                  <div class="content">
+                    <p class="box-title">
+                      Airport Transfer
+                    </p>
+                    <p class="box-content">
+                      More than 100 routes, prices starting from €2/person.
+                    </p>
+                  </div>
+                </div>
+              </b-col>
+
+                <b-col class="box box11" cols="4">
+                  <div class="box-img box-img11">
+
+                  </div>
+                  <div class="content-wrap">
+                    <div class="content">
+                      <p class="box-title">
+                        Airport parking
+                      </p>
+                      <p class="box-content">
+                        Save up to 60% - reserve it now!
+                      </p>
+                    </div>
+                  </div>
+                </b-col>
+              </b-row>
+
+          </div>
         </div>
+
+<!-- *******************Information Modal******************** -->
+
+    <div v-if="modal == 1" >
+      <div class="info-modal">
+
+
+        <div class="info-title-wrap">
+          <div class="info-modal-title">
+            asdfsd
+          </div>
+          <div class="info-close" v-on:click="closeInfo()">
+            <icon name="close" class="info-close-icon"></icon>
+          </div>
+        </div>
+
+
       </div>
     </div>
   </div>
@@ -178,21 +296,32 @@ export default {
   name: 'navbar',
   data() {
     return {
-      plan: false
+      modal: null,
     }
   },
   methods: {
     openPlan() {
-      this.plan = true
+      this.modal = 0
     },
     closePlan() {
-      this.plan = false
+      this.modal = null
+    },
+    openInfo() {
+      this.modal = 1
+    },
+    closeInfo() {
+      this.modal = null
     }
   }
 }
 </script>
 
 <style scoped>
+
+
+
+
+/***********Plan Modal***********/
 
 .row {
   margin: 0 40px;
@@ -265,7 +394,10 @@ export default {
 .box {
   display: flex;
   align-items: center;
-  /*padding: 0 20px;*/
+}
+
+.box:hover {
+  cursor: pointer;
 }
 
 .box-title {
@@ -296,7 +428,7 @@ export default {
   height: 100px;
   width: 100px;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: object-fit;
   margin-top: 40px;
   margin-right: -15px;
 }
@@ -319,10 +451,86 @@ export default {
 .box-img6 {
   background-image: URL("https://wizzair.com/static/images/default-source/information-services-images/card-images/trip_planner_icon_6f589cab.png");
 }
+.box-img7 {
+  background-image: URL("https://wizzair.com/static/images/default-source/information-services-images/card-images/flight-and-hotel_bc20d94b.png");
+}
+.box-img8 {
+  background-image: URL("https://wizzair.com/static/images/default-source/information-services-images/card-images/hotels-icon_cdf2f217.png");
+}
+.box-img9 {
+  margin-right: -55px;
+  background-image: URL("https://wizzair.com/static/images/default-source/information-services-images/card-images/car-icon_d4ab4364.png");
+}
+.box-img10 {
+  margin-right: -55px;
+  background-image: URL("https://wizzair.com/static/images/default-source/information-services-images/card-images/small-icons/parking-icon_d4c080bc.png");
+}
+.box-img11 {
+  margin-right: -55px;
+  background-image: URL("https://wizzair.com/static/images/default-source/information-services-images/card-images/small-icons/airport-transfer-icon_3358badc.png");
+}
+
 .content {
   display: flex;
   flex-direction: column;
 }
+
+
+
+
+
+/***********Info Modal***********/
+
+.info-modal-wrapper {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  height: 383vh;
+  width: 100%;
+  z-index: 9988;
+  background-color: rgba(0,0,0,.5);
+}
+
+.info-modal {
+  display: flex;
+  width: 100%;
+  max-width: 1445px;
+  align-self: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #fff;
+}
+
+/*.info-title-wrap {
+
+}
+
+.info-modal-title {
+
+}
+
+.info-close {
+
+}
+
+.info-close-icon {
+
+}*/
+
+
+
+
+
+
+
+
+
+
+
+/***********Navbar***********/
+
+
+
 
 #navbar {
   margin-top: -60px;
@@ -331,6 +539,15 @@ export default {
 
 #logo {
   margin-left: 2%;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 2px;
+  vertical-align: middle;
+  border: 4px solid transparent;
+  border-top-color: currentColor;
+  content: "";
 }
 
 .item-divider {
