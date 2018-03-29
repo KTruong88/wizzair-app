@@ -31,6 +31,7 @@ import DisclaimerFooter from './components/disclaimer_footer'
 import CopyrightFooter from './components/copyright_footer'
 import PolicyFooter from './components/policy_footer'
 import Icon from 'vue-awesome/components/Icon'
+import Modal from './components/modal'
 
 export default {
   name: 'App',
@@ -49,6 +50,7 @@ export default {
     CopyrightFooter,
     PolicyFooter,
     Icon,
+    Modal,
   }
 }
 
