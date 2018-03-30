@@ -53,29 +53,7 @@ export default {
   margin-left: 20px;
 }
 
-@media only screen and ( max-width:1167px) {
-  .wrapper {
-    margin-top: 70px;
-  }
-}
-
 @media only screen and ( max-width:905px) {
-  .wrapper {
-    margin-top: 130px;
-    flex-wrap: wrap;
-
-  }
-  .box {
-    margin: 0;
-    width: 25%;
-  }
-}
-
-@media only screen and ( max-width:805px) {
-  .wrapper {
-    margin-top: 180px;
-
-  }
   .box {
     margin: 0;
     width: 25%;
@@ -84,14 +62,8 @@ export default {
 
 @media only screen and ( max-width:610px) {
   .wrapper {
-    margin-top: 240px;
     height: 80px;
   }
 }
 
-@media only screen and ( max-width:500px) {
-  .wrapper {
-    margin-top: 320px;
-  }
-}
 </style>

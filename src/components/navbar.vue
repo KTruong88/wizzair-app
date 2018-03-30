@@ -14,7 +14,7 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav type="light" class="ml-auto">
 
-          <b-nav-item class="nav-item padding"          v-on:click="openPlan()">
+          <b-nav-item class="nav-item padding"          @click="openPlan()">
             Plan
             <span class="arrow"></span>
           </b-nav-item>
@@ -23,7 +23,7 @@
           </b-nav-item>
 
           <b-nav-item class="nav-item padding" right
-            v-on:click="openInfo()">
+            @click="openInfo()">
             Information
             <span class="arrow"></span>
           </b-nav-item>
@@ -31,7 +31,7 @@
           <b-nav-item class="item-divider">
           </b-nav-item>
 
-          <b-nav-item class="nav-item padding" right>
+          <b-nav-item class="nav-item padding" right @click="openBooking()">
             Check In & Bookings
           </b-nav-item>
 
@@ -266,13 +266,15 @@
 
 <!-- *******************Information Modal******************** -->
 
-<div v-if="modal == 1" class="plan-modal-wrapper">
-  <div class="plan-modal">
+<div v-if="modal == 1" class="plan-modal-wrapper  info-modal-wrapper">
+  <div class="plan-modal info-modal">
 
     <div class="title-wrap info-title-wrap">
       <div class="modal-title info-modal-title">
         Information & Services
       </div>
+
+      </input>
       <div class="close-icon-div" v-on:click="closePlan()">
         <icon name="close" class="close-icon"></icon>
       </div>
@@ -441,6 +443,55 @@
 
 
 
+  <div v-if="modal == 2" class="plan-modal-wrapper  booking-modal-wrapper">
+    <div class="plan-modal booking-modal">
+
+      <div class="title-wrap booking-title-wrap">
+        <div class="modal-title booking-modal-title">
+          Find Booking
+        </div>
+
+        <div class="close-icon-div" v-on:click="closeBooking()">
+          <icon name="close" class="close-icon"></icon>
+        </div>
+      </div>
+
+        <div class="booking-modal-body">
+          <input class="booking-input input1"
+                 type="text"
+                 placeholder="Confirmation code"
+            >
+
+          <input class="booking-input input2"
+                 type="text"
+                 placeholder="Passenger's last name"
+            >
+
+          <button class="booking-btn" type="button">
+            Search
+          </button>
+        </div>
+
+        <div class="booking-modal-footer">
+
+        </div>
+
+        </input>
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
 
       </div>
     </div>
@@ -469,6 +520,12 @@ export default {
       this.modal = 1
     },
     closeInfo() {
+      this.modal = null
+    },
+    openBooking() {
+      this.modal = 2
+    },
+    closeBooking() {
       this.modal = null
     }
   }
@@ -705,9 +762,101 @@ export default {
 
 
 
+/***********Booking Modal************/
 
 
 
+
+.booking-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 90;
+  width: 480px;
+  max-height: calc(100vh - 35vh);
+  min-height: calc(100vh - 35vh);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #fff;
+  border-radius: 5px;
+  opacity: 1;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  box-shadow: 0 15px 25px rgba(0,0,0,.1);
+  -webkit-transition: opacity .5s ease,-webkit-transform .5s ease;
+  transition: opacity .5s ease,-webkit-transform .5s ease;
+  transition: transform .5s ease,opacity .5s ease;
+  transition: transform .5s ease,opacity .5s ease,-webkit-transform .5s ease;
+}
+
+.booking-title-wrap {
+  padding: 30px 20px 30px 65px;
+  background: #f2f2f2;
+  border-radius: 5px 5px 0 0;
+}
+
+.booking-modal-title {
+  font-size: 24px;
+  font-weight: 300;
+  color: #06038d;
+}
+
+.booking-modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-btn {
+  min-width: 150px;
+  padding: 15px 20px;
+  font-size: 14px;
+  background-color: #c6007e;
+  position: relative;
+  display: inline-block;
+  height: auto;
+  min-width: 180px;
+  width: 70%;
+  align-self: center;
+  font-family: P22 Underground Pro,sans-serif;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: normal;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.booking-footer {
+
+}
+
+.booking-input {
+  position: relative;
+  z-index: 1;
+  border-radius: 3px;
+  padding: 20px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 70%;
+  align-self: center;
+  padding: 28px 10px 12px;
+  font-family: Source Sans Pro,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #343434;
+  background-color: #fff;
+  border: 1px solid #919191;
+  -webkit-transition: padding .2s ease-in-out;
+  transition: padding .2s ease-in-out;
+  border-radius: 3px;
+}
 
 
 
@@ -778,6 +927,8 @@ export default {
 
 @media only screen and (max-width:1000px) {
 
+/***** Page Modal******/
+
   .title-wrap {
     margin-top: 30px;
     padding-bottom: 30px;
@@ -797,9 +948,23 @@ export default {
   .box {
     flex-basis: 50%;
   }
+
+/***** Info Modal******/
+
+  .col-3 {
+    max-width: 50%;
+  }
+  .info-box {
+    flex-basis: 50%;
+  }
+  .info-box {
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (max-width:700px) {
+
+/***** Page Modal******/
 
   .plan-modal-wrapper {
     height: 5200px;
@@ -820,9 +985,25 @@ export default {
   .box {
     flex-basis: 100%;
   }
+
+/***** Info Modal******/
+
+  .info-modal {
+    height: 2050px;
+  }
+  .col-3 {
+    max-width: 100%;
+  }
+  .info-box {
+    flex-basis: 100%;
+  }
+  .info-box {
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (max-width:540px) {
+
   .plan-modal {
     height: 2200px;
   }

@@ -80,6 +80,10 @@ export default {
 }
 
 @media only screen and ( max-width:700px) {
+  .responsive-wrap {
+    margin-top: -50px;
+    height: 170px;
+  }
   .content-wrapper {
     flex-direction: column;
   }
