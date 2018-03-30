@@ -38,7 +38,7 @@
           <b-nav-item class="item-divider">
           </b-nav-item>
 
-          <b-nav-item class="nav-item padding" right>
+          <b-nav-item class="nav-item padding" right @click="openSignIn()">
             Sign In
           </b-nav-item>
 
@@ -440,7 +440,7 @@
   </div>
 
 
-
+<!-- *************Booking Modal************** -->
 
 
   <div v-if="modal == 2" class="plan-modal-wrapper  booking-modal-wrapper">
@@ -460,12 +460,14 @@
           <input class="booking-input input1"
                  type="text"
                  placeholder="Confirmation code"
-            >
+           >
+         </input>
 
           <input class="booking-input input2"
                  type="text"
                  placeholder="Passenger's last name"
             >
+          </input>
 
           <button class="btn booking-btn" type="button">
             Search
@@ -481,15 +483,65 @@
           </button>
         </div>
 
-        </input>
-
-
     </div>
   </div>
 
 
 
+  <!-- *************Sign in************** -->
 
+
+    <div v-if="modal == 3" class="plan-modal-wrapper  booking-modal-wrapper">
+      <div class="plan-modal booking-modal">
+
+        <div class="booking-title-wrap">
+          <div class="booking-modal-title">
+            Sign in
+          </div>
+
+          <div class="close-icon-div" @click="closeSignIn()">
+            <icon name="close" class="close-icon"></icon>
+          </div>
+        </div>
+
+          <div class="booking-modal-body sign-body">
+            <input class="booking-input input1 sign-in-input"
+                   type="text"
+                   placeholder="E-mail"
+             >
+           </input>
+
+            <input class="booking-input input2 sign-in-input"
+                   type="text"
+                   placeholder="Password"
+              >
+            </input>
+            <div class="forgot sign-footer-links">
+              <p class="forgot-link">Forgot your password?</p>
+            </div>
+
+            <button class="btn booking-btn sign-in-btn sign-in-btn1" type="button">
+              Sign in
+            </button>
+            <button class="btn booking-btn sign-in-btn sign-in-btn2" type="button">
+              Cancel
+            </button>
+          </div>
+
+          <div class="sign-footer">
+
+            <div class="sign-footer-links">
+              <div class="link1">
+                Registration
+              </div>
+              <div class="link2">
+                Agency Login
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
 
 
 
@@ -532,6 +584,12 @@ export default {
     },
     closeBooking() {
       this.modal = null
+    },
+    openSignIn() {
+      this.modal = 3
+    },
+    closeSignIn() {
+      this.modal = null
     }
   }
 }
@@ -543,6 +601,9 @@ export default {
 
 
 /***********Plan Modal***********/
+
+
+
 
 .row {
   margin: 0 40px;
@@ -826,7 +887,7 @@ export default {
 .booking-modal-body {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #e1e1e1;
   height: 238px;
   min-height: 238px;
 }
@@ -878,9 +939,6 @@ export default {
   -webkit-transition: padding .2s ease-in-out;
   transition: padding .2s ease-in-out;
   border-radius: 3px;
-}
-
-.booking-input {
   margin-bottom: 20px;
   line-height: 20px;
 }
@@ -926,6 +984,62 @@ export default {
   color: rgba(255, 255, 255, 1);
   box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
 }
+
+
+
+
+
+/***********Sign in***********/
+
+
+
+
+
+
+ .sign-in-input {
+  height: 62px;
+}
+
+.sign-in-btn1 {
+  margin-bottom: 10px;
+}
+
+ .sign-in-btn2 {
+  background-color: #3434e0;
+  margin-top: 10px;
+}
+
+.sign-body {
+  height: 468px;
+  border-bottom: none;
+}
+
+.sign-footer {
+  height: 80px;
+}
+
+.forgot {
+  margin-top: -18px;
+  margin-left: 85px;
+}
+
+.sign-footer-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 45px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #a6006a;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.sign-footer-links:hover {
+  cursor: pointer;
+}
+
+
 
 
 
@@ -1083,6 +1197,9 @@ export default {
 @media only screen and (max-width:500px) {
   .booking-modal {
     width: 370px;
+  }
+  .forgot-link {
+    margin-right: 80px;
   }
 }
 
