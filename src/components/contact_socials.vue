@@ -5,14 +5,16 @@
         <div class="box1-img">
 
         </div>
-        <div class="content-wrapper">
-          <div class="title title1">
-            Need help?
+
+          <div class="content-wrapper">
+            <div class="title title1">
+              Need help?
+            </div>
+            <div class="content content1">
+              <a href="">Browse our FAQ to get instant answer</a>
+            </div>
           </div>
-          <div class="content content1">
-            <a href="">Browse our FAQ to get instant answer</a>
-          </div>
-        </div>
+
       </div>
 
       <div class="box, box2">
@@ -44,6 +46,7 @@
           Subscribe
         </button>
       </div>
+
     </div>
   </div>
 </template>

@@ -51,10 +51,9 @@
             <icon name="fighter-jet"></icon> <br>
             Flights
           </button>
-          <button class="buttons">
 
-            <icon
-                        name="fighter-jet"
+          <button class="buttons">
+            <icon       name="fighter-jet"
                        class="fighter-jet-icon"
                        style="height: 1.2rem;
                               margin-left: 20px;
@@ -66,8 +65,7 @@
             </icon>
             <br>
 
-            <icon
-                        name="plus"
+            <icon       name="plus"
                        class="plus-icon"
                        style="height: .8rem;
                               margin-top: -20px;
@@ -90,6 +88,7 @@
               >
             </icon>
              <br>
+
             <p class="flight-txt">Flight & Hotel</p>
           </button>
           <button class="buttons">
@@ -104,14 +103,20 @@
 
         <b-form class="bform">
           <div class="top-wrapper">
-            <b-form-input class="input input1" type="text" placeholder="Origin">
+            <b-form-input class="input input1"
+                          type="text"
+                          placeholder="Origin"
+              >
             </b-form-input>
 
             <div class="arrow_box">
 
             </div>
 
-            <b-form-input class="input input2" type="text" placeholder="Destination">
+            <b-form-input class="input input2"
+                          type="text"
+                          placeholder="Destination"
+              >
             </b-form-input>
 
           </div>
@@ -119,14 +124,21 @@
           <div class="top-wrapper bottom-wrapper">
 
             <div class="input-wrap">
-              <input type="text" class="input-half input-left" placeholder="DEPARTURE">
+              <input type="text"
+                     class="input-half input-left" placeholder="DEPARTURE"
+                >
 
               <div class="right-arrow">
 
               </div>
-              <input type="text" class="input-half input-right" placeholder="RETURN">
+              <input type="text"
+                     class="input-half input-right" placeholder="RETURN"
+                >
             </div>
-            <b-form-input class="input input4" placeholder="PASSENGERS">
+            <b-form-input
+                     class="input input4"
+                     placeholder="PASSENGERS"
+              >
 
             </b-form-input>
             <button class="submit-button">
@@ -142,9 +154,8 @@
         </b-form>
       </div>
 
-
-</b-carousel>
-</div>
+    </b-carousel>
+  </div>
 </template>
 
 <script>
@@ -172,10 +183,8 @@ export default {
 
 .fa-icon {
   width: auto;
-  height: 2.3em; /* or any other relative font sizes */
+  height: 2.3em;
   color: darkblue;
-
-  /* You would have to include the following two lines to make this work in Safari */
   max-width: 100%;
   max-height: 100%;
 }
@@ -263,6 +272,16 @@ export default {
   height: 475px;
 }
 
+
+
+
+
+/*************Form*************/
+
+
+
+
+
 .carousel-form {
   display: flex;
   z-index: 100;
@@ -342,6 +361,7 @@ export default {
 }
 
 @media only screen and (max-width:810px) {
+
   .carousel-form {
     flex-direction: column;
   }
@@ -390,9 +410,7 @@ export default {
   .fa-icon {
     margin-bottom: -5px;
     width: auto;
-    height: 1.3em; /* or any other relative font sizes */
-
-    /* You would have to include the following two lines to make this work in Safari */
+    height: 1.3em;
     max-width: 100%;
     max-height: 100%;
   }
@@ -410,10 +428,10 @@ export default {
   .flight-txt {
     margin-top: -45px !important;
   }
-
 }
 
 @media only screen and ( max-width:1100px) {
+
   .carousel-form {
     z-index: 1000;
     position: absolute;
@@ -430,6 +448,7 @@ export default {
     min-width: 340px;
   }
 }
+
 .bform {
   display: flex;
   flex-direction: column;
@@ -598,8 +617,8 @@ button:hover,
 label:focus,
 .btn:active,
 .btn.active {
-    outline:0px !important;
-    -webkit-appearance:none;
+outline:0px !important;
+-webkit-appearance:none;
 }
 
 .arrow_box {
@@ -636,6 +655,7 @@ label:focus,
 	position: relative;
 	background: #fff;
 }
+
 .right-arrow:after, .right-arrow:before {
 	left: 100%;
 	top: 50%;

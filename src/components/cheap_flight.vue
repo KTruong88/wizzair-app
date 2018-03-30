@@ -5,13 +5,14 @@
       <h1 class="title">
         Cheap flight offers**
       </h1>
+
         <div>
           <b-card class="cards card1">
             <div class="card-content-wrapper">
               <div class="card-text-wrapper">
-                  <p class="card-title">
-                    Budapest
-                  </p>
+                <p class="card-title">
+                  Budapest
+                </p>
                 <p class="card-content">
                   from Baku**
                 </p>
@@ -27,9 +28,9 @@
           <b-card class="cards card2">
             <div class="card-content-wrapper">
               <div class="card-text-wrapper">
-                  <p class="card-title">
-                    Timisoara
-                  </p>
+                <p class="card-title">
+                  Timisoara
+                </p>
                 <p class="card-content">
                   from London Luton**
                 </p>
@@ -45,9 +46,9 @@
           <b-card class="cards card3">
             <div class="card-content-wrapper">
               <div class="card-text-wrapper">
-                  <p class="card-title">
-                    Warsaw
-                  </p>
+                <p class="card-title">
+                  Warsaw
+                </p>
                 <p class="card-content">
                   from Malta**
                 </p>
@@ -58,19 +59,18 @@
             </div>
           </b-card>
         </div>
+
         <div class="disclaimer-wrap">
           <p>**One way price including taxes, administration and other non-optional charges and one hand luggage (max: 55x40x23cm). Each piece of checked-in baggage is subject to additional fees. The price applies only to bookings made on wizzair.com and the WIZZ mobile app or made by our call centre. Number of seats at indicated prices are limited.</p>
         </div>
-    </div>
 
+    </div>
   </div>
 </template>
 
 <script>
 export default {
 }
-
-
 </script>
 
 <style scoped>
