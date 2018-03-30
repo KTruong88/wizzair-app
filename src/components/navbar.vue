@@ -45,7 +45,7 @@
           <b-nav-item class="item-divider">
           </b-nav-item>
 
-          <b-nav-item right>
+          <b-nav-item right @click="openEnglish()">
             <span class="flag padding"></span>
             English
             <span class="arrow"></span>
@@ -546,6 +546,89 @@
 
 
 
+<!--***************English Modal****************-->
+
+
+
+
+
+
+<div v-if="modal == 4" class="plan-modal-wrapper  info-modal-wrapper">
+  <div class="plan-modal english-modal">
+
+    <div class="title-wrap english-title-wrap">
+      <div class="modal-title english-modal-title">
+        Choose your language
+      </div>
+
+      </input>
+      <div class="close-icon-div" @click="closeEnglish()">
+        <icon name="close" class="close-icon"></icon>
+      </div>
+    </div>
+
+    <b-row class="info-row info-row-top english-row">
+      <b-col class="info-box info-box1" cols="3">
+
+        <div class="info-box-content">
+          <ul class="info-box-list">
+            <li>English</li>
+            <li>Magyar</li>
+            <li>Български</li>
+            <li>Bosanski</li>
+            <li>Česky</li>
+            <li>Deutsch</li>
+            <li>Español</li>
+          </ul>
+        </div>
+      </b-col>
+
+      <b-col class="info-box info-box2" cols="3">
+
+        <div class="info-box-content">
+          <ul class="info-box-list">
+            <li>Français</li>
+            <li>ქართული</li>
+            <li>עברית</li>
+            <li>Italiano</li>
+            <li>Latviešu</li>
+            <li>Lietuvių</li>
+            <li>Македонски</li>
+          </ul>
+        </div>
+      </b-col>
+
+      <b-col class="info-box info-box3" cols="3">
+
+        <div class="info-box-content">
+          <ul class="info-box-list">
+            <li>Nederlands</li>
+            <li>Norsk</li>
+            <li>Polski</li>
+            <li>Română</li>
+            <li>Português</li>
+            <li>Русский</li>
+            <li>Slovenský</li>
+          </ul>
+        </div>
+      </b-col>
+
+      <b-col class="info-box info-box4" cols="3">
+
+        <div class="info-box-content">
+          <ul class="info-box-list">
+            <li>Svenska</li>
+            <li>Српски</li>
+            <li>Українська</li>
+            <li>Catalá</li>
+          </ul>
+        </div>
+      </b-col>
+    </b-row>
+    </div>
+  </div>
+
+
 
 
 
@@ -589,6 +672,12 @@ export default {
       this.modal = 3
     },
     closeSignIn() {
+      this.modal = null
+    },
+    openEnglish() {
+      this.modal = 4
+    },
+    closeEnglish() {
       this.modal = null
     }
   }
@@ -1042,6 +1131,37 @@ export default {
 
 
 
+/*********English Modal***********/
+
+
+
+
+.english-modal {
+  border-top: none;
+  margin-top: 5px;
+  height: 312px;
+  width: 96%;
+}
+
+.english-modal-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #06038d;
+  padding: 0;
+  margin: 0 40px;
+  font-family: P22 Underground Pro,sans-serif;
+  text-transform: none;
+}
+
+.english-title-wrap {
+  border-bottom: none;
+}
+
+.english-row {
+  margin: 0 40px;
+}
+
+
 
 /***********Navbar***********/
 
@@ -1142,6 +1262,13 @@ export default {
   .info-box {
     margin-bottom: 20px;
   }
+
+  /*English Modal*/
+
+  .english-modal {
+    height: 512px;
+  }
+
 }
 
 @media only screen and (max-width:700px) {
@@ -1182,6 +1309,13 @@ export default {
   .info-box {
     margin-bottom: 20px;
   }
+
+ /*****English Modal******/
+
+ .english-modal {
+   height: 815px;
+ }
+
 }
 
 @media only screen and (max-width:540px) {
@@ -1191,6 +1325,9 @@ export default {
   .title-wrap {
     margin-top: 90px;
     padding-bottom: 90px;
+  }
+  .english-modal {
+    height: 865px;
   }
 }
 

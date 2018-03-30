@@ -20,6 +20,10 @@
               <p class="price">‎​
                 €​44.99
               </p>
+
+            </div>
+            <div class="cta">
+              Book now
             </div>
           </b-card>
         </div>
@@ -39,6 +43,9 @@
                 €​20.99
               </p>
             </div>
+            <div class="cta">
+              Book now
+            </div>
           </b-card>
         </div>
 
@@ -56,6 +63,9 @@
               <p class="price">‎​
                 €​39.99
               </p>
+            </div>
+            <div class="cta">
+              Book now
             </div>
           </b-card>
         </div>
@@ -92,6 +102,7 @@ export default {
   max-width: 1400px;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .title {
@@ -105,6 +116,8 @@ export default {
 }
 
 .cards {
+  width: 442px;
+  position: relative;
   max-width: 442px;
   height: 250px;
   background-repeat: no-repeat;
@@ -158,6 +171,7 @@ export default {
 }
 
 .card-content-wrapper {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -166,8 +180,41 @@ export default {
   background-color: #fff;
   width: 442px;
   height: 100px;
+  min-height: 100px;
   margin-left: -21px;
   margin-top: 129px;
+  overflow: hidden;
+  transition: .2s;
+}
+
+.card:hover .cta {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  margin-left: -20px;
+  margin-top: 188px;
+}
+
+.card:hover .card-content-wrapper {
+  margin-top: 88px;
+}
+
+.cta {
+  display: none;
+  height: 0px;
+  width: 100%;
+  color: #fff;
+  z-index: 9000;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 20px;
+  text-align: left;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: #c6007e;
+  border-radius: 0 0 3px 3px;
+  font-family: P22 Underground Pro,sans-serif;
 }
 
 .card-content {

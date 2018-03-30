@@ -50,19 +50,19 @@
 
           <div class="icon-wrapper">
             <div class="icon icon1">
-
+              <icon name="youtube-play"></icon>
             </div>
             <div class="icon icon2">
-
+              <icon name="facebook-square"></icon>
             </div>
             <div class="icon icon3">
-
+              <icon name="twitter-square"></icon>
             </div>
             <div class="icon icon4">
-
+              <icon name="instagram"></icon>
             </div>
             <div class="icon icon5">
-
+              <icon name="linkedin-square"></icon>
             </div>
           </div>
         </div>
@@ -150,8 +150,13 @@ export default {
   display: flex;
   flex-direction: column;
 }
+
 .icon-wrapper {
   display: flex;
+}
+
+.icon {
+  width: 30px;
 }
 
 @media only screen and ( max-width:740px) {
