@@ -360,76 +360,6 @@ export default {
   font-size: 11px;
 }
 
-@media only screen and (max-width:810px) {
-
-  .carousel-form {
-    flex-direction: column;
-  }
-  .buttons {
-    height: 55px;
-    width: 25%;
-  }
-  .buttons:focus {
-    box-shadow: 1px 0px 0px;
-  }
-  .side-buttons {
-    width: 100%;
-    flex-direction: row;
-  }
-  .input-half, .input4 {
-    display: none;
-  }
-  .input2 {
-    margin-bottom: -90px;
-  }
-  .bottom-wrapper {
-    display: none;
-  }
-  .hero-banner-wrap {
-    display: none;
-  }
-  .right-arrow {
-    display: none;
-  }
-  .hero-banner-wrap2 {
-    display: none;
-  }
-  .carousel-form {
-    width: 90% !important;
-    height: 320px !important;
-  }
-  .submit-button {
-    margin-top: 15px;
-  }
-  .dates-link {
-    margin-top: -40px;
-  }
-  .search-link {
-    margin-top: -40px;
-  }
-  .fa-icon {
-    margin-bottom: -5px;
-    width: auto;
-    height: 1.3em;
-    max-width: 100%;
-    max-height: 100%;
-  }
-  .fighter-jet-icon {
-    margin-left: 50px !important;
-    margin-bottom: -4px !important;
-  }
-  .plus-icon {
-    margin-bottom: 4px !important;
-  }
-  .bed-icon {
-    margin-right: 125px !important;
-    margin-bottom: 20px !important;
-  }
-  .flight-txt {
-    margin-top: -45px !important;
-  }
-}
-
 @media only screen and ( max-width:1100px) {
 
   .carousel-form {
@@ -679,6 +609,94 @@ outline:0px !important;
 	border-left-color: #919191;
 	border-width: 9px;
 	margin-top: -9px;
+}
+
+@media only screen and (max-width:810px) {
+
+  .carousel-form {
+    flex-direction: column;
+  }
+
+  .buttons {
+    height: 55px;
+    width: 25%;
+  }
+
+  .buttons:focus {
+    box-shadow: 1px 0px 0px;
+  }
+
+  .side-buttons {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .input-half, .input4 {
+    display: none;
+  }
+
+  .input2 {
+    margin-bottom: -90px;
+  }
+
+  .bottom-wrapper {
+    display: none;
+  }
+
+  .hero-banner-wrap {
+    display: none;
+  }
+
+  .right-arrow {
+    display: none;
+  }
+
+  .hero-banner-wrap2 {
+    display: none;
+  }
+
+  .carousel-form {
+    width: 90% !important;
+    height: 320px !important;
+  }
+
+  .submit-button {
+    margin-top: 15px;
+  }
+
+  .dates-link {
+    margin-top: -40px;
+  }
+
+  .search-link {
+    margin-top: -40px;
+  }
+
+  .fa-icon {
+    margin-bottom: -5px;
+    width: auto;
+    height: 1.3em;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .fighter-jet-icon {
+    margin-left: 50px !important;
+    margin-bottom: -4px !important;
+  }
+
+  .plus-icon {
+    margin-bottom: 4px !important;
+  }
+
+  .bed-icon {
+    margin-right: 125px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .flight-txt {
+    margin-top: -45px !important;
+  }
 }
 
 </style>

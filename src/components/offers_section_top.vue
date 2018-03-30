@@ -86,7 +86,8 @@ export default {
   padding-left: 20px;
 }
 
-.top-left-wrapper, .top-right-wrapper {
+.top-left-wrapper,
+.top-right-wrapper {
   display: flex;
   width: 100%;
   margin-right: 20px;
@@ -98,6 +99,7 @@ export default {
   max-width: 331px;
   background-size: cover;
 }
+
 .banner1 {
   background-image: URL("https://wizzair.com/static/images/default-source/banner-images/3rd-party-banners/booking_com_ccd40dc0.jpg");
   border-top-left-radius: 3px;
@@ -110,7 +112,8 @@ export default {
   border-bottom-left-radius: 3px;
 }
 
-.banner2, .banner4 {
+.banner2,
+.banner4 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -121,7 +124,8 @@ export default {
   border-bottom-right-radius: 3px;
 }
 
-.banner2-title, .banner4-title {
+.banner2-title,
+.banner4-title {
   display: block;
   padding: 0 30px 5px 0;
   margin: 0;
@@ -133,7 +137,8 @@ export default {
   margin-top: 15px;
 }
 
-.banner2-content, .banner4-content{
+.banner2-content,
+.banner4-content{
   margin-top: 0;
   margin-bottom: 2rem;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -177,9 +182,6 @@ strong {
     width: 50%;
   }
 
-  .banner {
-
-  }
   .banner-wrap {
     flex-direction: column;
   }
@@ -190,4 +192,5 @@ strong {
     display: none;
   }
 }
+
 </style>

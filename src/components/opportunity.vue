@@ -185,6 +185,13 @@ export default {
   .title, .card, {
     display: none;
   }
+}
+
+@media only screen and (max-width:411px) {
+  .title-wrap {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
 
 }
 </style>

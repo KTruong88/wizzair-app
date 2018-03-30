@@ -40,36 +40,43 @@ export default {
     height: 230px;
   }
 }
+
 @media only screen and ( max-width:755px) {
   .wrapper {
     height: 260px;
   }
 }
+
 @media only screen and ( max-width:650px) {
   .wrapper {
     height: 290px;
   }
 }
+
 @media only screen and ( max-width:615px) {
   .wrapper {
     height: 320px;
   }
 }
+
 @media only screen and ( max-width:530px) {
   .wrapper {
     height: 360px;
   }
 }
+
 @media only screen and ( max-width:500px) {
   .wrapper {
     margin-top: -140px;
   }
 }
+
 @media only screen and ( max-width:480px) {
   .wrapper {
     height: 400px;
   }
 }
+
 @media only screen and ( max-width:440px) {
   .wrapper {
     height: 450px;

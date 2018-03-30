@@ -84,6 +84,7 @@ export default {
     margin-top: -50px;
     height: 170px;
   }
+
   .content-wrapper {
     flex-direction: column;
   }

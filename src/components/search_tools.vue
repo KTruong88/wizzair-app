@@ -75,7 +75,6 @@
           </a>
         </div>
 
-
       </div>
     </div>
   </div>
@@ -160,7 +159,6 @@ export default {
   justify-content: center;
   flex: 1;
   height: 97px;
-  /*border: 1px solid red;*/
 }
 
 .title-wrap {
@@ -177,7 +175,6 @@ export default {
   align-self: flex-start;
   font-weight: bold;
 }
-
 
 .pill {
   display: inline-block;
@@ -230,54 +227,54 @@ export default {
   .item-divider {
     display: none;
   }
-
-  @media only screen and (max-width:872px) {
-    .wrapper {
-      height: 577px;
-    }
-    .heading {
-      align-self: center;
-      margin-bottom: 20px;
-    }
-    .content-item {
-      flex-basis: 100%;
-      justify-content: center;
-      margin-top: 10px;
-      min-width: 440px;
-    }
-    .trip-img {
-
-    }
-    .farefinder-img {
-      margin-top: 30px;
-    }
-    .trip-img {
-      margin-left: 78px;
-    }
-    .content-fare {
-      text-align: left;
-    }
-
-    .title {
-      margin-top: 30px;
-    }
-    .farefinder-img {
-      margin-left: -28px;
-    }
-    .map-img {
-      margin-left: 70px;
-    }
-    .destination {
-      margin-left: 70px;
-    }
-  }
-
-  @media only screen and (max-width:410px) {
-    .wrapper {
-      /*height: 620px;*/
-      display: none;
-    }
-  }
-
 }
+
+@media only screen and (max-width:872px) {
+  .wrapper {
+    height: 577px;
+  }
+  .heading {
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  .content-item {
+    flex-basis: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    min-width: 440px;
+  }
+  .trip-img {
+
+  }
+  .farefinder-img {
+    margin-top: 30px;
+  }
+  .trip-img {
+    margin-left: 78px;
+  }
+  .content-fare {
+    text-align: left;
+  }
+
+  .title {
+    margin-top: 30px;
+  }
+  .farefinder-img {
+    margin-left: -28px;
+  }
+  .map-img {
+    margin-left: 70px;
+  }
+  .destination {
+    margin-left: 70px;
+  }
+}
+
+@media only screen and (max-width:410px) {
+  .wrapper {
+    /*height: 620px;*/
+    display: none;
+  }
+}
+
 </style>

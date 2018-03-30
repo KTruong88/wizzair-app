@@ -36,6 +36,7 @@
       <div class="box box5">
         Agency Login
       </div>
+
     </div>
 </div>
 </template>
@@ -100,6 +101,6 @@ export default {
   .box5 {
     margin-left: -1px;
   }
-
 }
+
 </style>

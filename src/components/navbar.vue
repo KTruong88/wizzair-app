@@ -446,8 +446,8 @@
   <div v-if="modal == 2" class="plan-modal-wrapper  booking-modal-wrapper">
     <div class="plan-modal booking-modal">
 
-      <div class="title-wrap booking-title-wrap">
-        <div class="modal-title booking-modal-title">
+      <div class="booking-title-wrap">
+        <div class="booking-modal-title">
           Find Booking
         </div>
 
@@ -467,13 +467,18 @@
                  placeholder="Passenger's last name"
             >
 
-          <button class="booking-btn" type="button">
+          <button class="btn booking-btn" type="button">
             Search
           </button>
         </div>
 
         <div class="booking-modal-footer">
-
+          <p class="footer-title">
+            Already have an account?
+          </p>
+          <button class="btn booking-btn-login" type="button">
+            Log in
+          </button>
         </div>
 
         </input>
@@ -697,6 +702,10 @@ export default {
 
 /***********Info Modal***********/
 
+
+
+
+
 .info-modal-wrapper {
   display: flex;
   position: absolute;
@@ -767,6 +776,7 @@ export default {
 
 
 
+
 .booking-modal {
   position: fixed;
   top: 50%;
@@ -791,31 +801,47 @@ export default {
 }
 
 .booking-title-wrap {
+  display: flex;
+  max-width: 1400px;
+  align-self: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+  height: 85px;
+  min-height: 85px;
   padding: 30px 20px 30px 65px;
   background: #f2f2f2;
   border-radius: 5px 5px 0 0;
+  margin-bottom: 32px;
 }
 
 .booking-modal-title {
   font-size: 24px;
   font-weight: 300;
+  margin-left: 10px;
   color: #06038d;
 }
 
 .booking-modal-body {
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid #f2f2f2;
+  height: 238px;
+  min-height: 238px;
 }
 
 .booking-btn {
   min-width: 150px;
-  padding: 15px 20px;
+  padding: 10px 20px;
   font-size: 14px;
   background-color: #c6007e;
   position: relative;
   display: inline-block;
-  height: auto;
+  height: 44px;
+  min-height: 44px;
   min-width: 180px;
+  font-weight: 400;
   width: 70%;
   align-self: center;
   font-family: P22 Underground Pro,sans-serif;
@@ -830,10 +856,6 @@ export default {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.booking-footer {
-
 }
 
 .booking-input {
@@ -858,11 +880,57 @@ export default {
   border-radius: 3px;
 }
 
+.booking-input {
+  margin-bottom: 20px;
+  line-height: 20px;
+}
 
+.booking-modal-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 141px;
+  min-height: 141px;
+}
+
+.footer-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #343434;
+  text-transform: uppercase;
+  font-family: Source Sans Pro,sans-serif;
+}
+
+.booking-btn-login {
+  background-color: #c6007e;
+  min-width: 150px;
+  font-weight: 400;
+  width: 150px;
+  min-height: 44px;
+  height: 44px;
+  align-self: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-family: P22 Underground Pro,sans-serif;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: normal;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  opacity: .6;
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
 
 
 
 /***********Navbar***********/
+
 
 
 
@@ -949,7 +1017,7 @@ export default {
     flex-basis: 50%;
   }
 
-/***** Info Modal******/
+/*Info Modal*/
 
   .col-3 {
     max-width: 50%;
@@ -964,7 +1032,7 @@ export default {
 
 @media only screen and (max-width:700px) {
 
-/***** Page Modal******/
+/* Page Modal*/
 
   .plan-modal-wrapper {
     height: 5200px;
@@ -1003,7 +1071,6 @@ export default {
 }
 
 @media only screen and (max-width:540px) {
-
   .plan-modal {
     height: 2200px;
   }
@@ -1013,6 +1080,10 @@ export default {
   }
 }
 
-
+@media only screen and (max-width:500px) {
+  .booking-modal {
+    width: 370px;
+  }
+}
 
 </style>

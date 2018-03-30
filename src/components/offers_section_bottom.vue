@@ -85,7 +85,6 @@ export default {
   background-color: #f2f2f2;
   padding: 0 20px;
   margin: 0 auto;
-
 }
 
 .box-wrap {
@@ -211,7 +210,6 @@ export default {
 }
 
 @media only screen and (max-width:830px) {
-
   .wrapper {
     height: 1090px
   }
@@ -224,7 +222,6 @@ export default {
 }
 
 @media only screen and (max-width:815px) {
-
   .box, .content {
     width: 330px;
   }
