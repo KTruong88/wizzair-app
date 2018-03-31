@@ -5,9 +5,12 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
+import VueResource from 'vue-resource'
 
+Vue.use(VueResource)
 Vue.use(BootstrapVue)
 Vue.component('icon', Icon)
+
 
 Vue.config.productionTip = false
 

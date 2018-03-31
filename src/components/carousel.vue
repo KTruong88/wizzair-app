@@ -43,8 +43,16 @@
       </b-carousel-slide>
 
 <!-- Carousel form -->
-
+  <div class="form-wrap-wrap">
+    <div class="form-wrap">
       <div class="carousel-form">
+          <div class="flight-modal" v-show="openJoke">
+            <div class="close-icon-div" v-on:click="closeJoke()">
+              <icon name="close" class="close-icon"></icon>
+            </div>
+            <p>{{random_joke}}</p>
+            <button class="random" @click="getJoke()">Random Joke</button>
+          </div>
 
         <div class="side-buttons" v-on:click="nextSlide()">
           <button class="buttons button1">
@@ -103,11 +111,13 @@
 
         <b-form class="bform">
           <div class="top-wrapper">
-            <b-form-input class="input input1"
+            <b-form-div class="input input1"
                           type="text"
                           placeholder="Origin"
+                          @click="showJoke(), getJoke()"
               >
-            </b-form-input>
+              Origin
+            </b-form-div>
 
             <div class="arrow_box">
 
@@ -153,7 +163,8 @@
           </div>
         </b-form>
       </div>
-
+    </div>
+  </div>
     </b-carousel>
   </div>
 </template>
@@ -163,7 +174,9 @@ export default {
   data () {
     return {
       slide: 0,
-      sliding: null
+      sliding: null,
+      random_joke: "",
+      openJoke: false
     }
   },
   methods: {
@@ -175,11 +188,77 @@ export default {
     },
     nextSlide() {
       this.slide += 1
+    },
+    showJoke() {
+      this.openJoke = true
+    },
+    closeJoke() {
+      this.openJoke = false
+    },
+    getJoke() {
+      this.$http.get("http://localhost:3000")
+      .then(response => {
+        let random_jokes = []
+        let jokes = response.body.value
+
+        jokes.forEach(joke => {
+          random_jokes = joke.joke
+        })
+        this.random_joke = random_jokes
+      }, error => {
+        console.error(error)
+      })
     }
   }
 }
 </script>
 <style scoped>
+
+/**********Form Modal***********/
+
+.random {
+  border-radius: 3px;
+}
+
+.random:hover {
+  cursor: pointer;
+}
+
+.close-icon-div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-icon:hover {
+  cursor: pointer;
+}
+
+.form-wrap-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-wrap {
+  align-self: center;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.flight-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 400;
+  height: 423px;
+  width: 80%;
+  max-width: 338px;
+  margin-left: 410px;
+  padding: 20px;
+  background-color: #fff;
+}
 
 .fa-icon {
   width: auto;
@@ -283,15 +362,17 @@ export default {
 
 
 .carousel-form {
+  position: relative;
   display: flex;
   z-index: 100;
-  position: absolute;
   margin-top: -450px;
   margin-left: 40px;
   border-radius: 5px;
   background-color: #f2f2f2;
   box-shadow: 1px 0 2px rgba(0,0,0,.2);
   width: 29.3%;
+  max-width: 423px;
+  min-width: 423px;
   height: 423px;
 }
 
@@ -429,6 +510,7 @@ export default {
   font-family: Source Sans Pro,sans-serif;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
+  color: #919191;
   border: 1px solid #919191;
 }
 
@@ -440,10 +522,19 @@ export default {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom: transparent;
+  background-color: #fff;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 18px;
+  text-shadow: none;
 }
 
 .input1:focus {
   border-bottom: none !important;
+}
+
+.input1:hover {
+  cursor: text;
 }
 
 .form-control:focus {
@@ -611,12 +702,21 @@ outline:0px !important;
 	margin-top: -9px;
 }
 
+
+
+
 @media only screen and (max-width:810px) {
 
   .carousel-form {
     flex-direction: column;
   }
 
+  .flight-modal {
+    max-width: 100%;
+    width: 100%;
+    align-self: center;
+    margin: 0;
+  }
   .buttons {
     height: 55px;
     width: 25%;

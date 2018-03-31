@@ -20,10 +20,9 @@
               <p class="price">‎​
                 €​44.99
               </p>
-
-            </div>
-            <div class="cta">
-              Book now
+              <div class="cta">
+                Book now
+              </div>
             </div>
           </b-card>
         </div>
@@ -42,9 +41,10 @@
               <p class="price">‎​
                 €​20.99
               </p>
-            </div>
-            <div class="cta">
-              Book now
+
+              <div class="cta">
+                Book now
+              </div>
             </div>
           </b-card>
         </div>
@@ -63,10 +63,11 @@
               <p class="price">‎​
                 €​39.99
               </p>
+              <div class="cta">
+                Book now
+              </div>
             </div>
-            <div class="cta">
-              Book now
-            </div>
+
           </b-card>
         </div>
 
@@ -139,9 +140,6 @@ export default {
 .card3 {
   background-image: URL("https://wizzair.com/static/images/default-source/banner-images/waw_7ef0c47c.jpg");
 }
-.card4 {
-  background-image: URL("https://wizzair.com/static/images/default-source/banner-images/plq_0f0e3515.jpg");
-}
 
 .card-text-wrapper {
   display: flex;
@@ -152,7 +150,6 @@ export default {
 .card-title-wrapper {
   padding: 0 10px 0 20px;
   font-weight: 700;
-  font-family: P22 Underground Pro,sans-serif;
   font-size: 16px;
   color: #c6007e;
   text-transform: uppercase;
@@ -161,13 +158,14 @@ export default {
 
 .card-title {
   margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 0px;
   font-family: P22 Underground Pro,sans-serif;
   font-weight: 700;
   text-shadow: none;
   font-size: 16px;
   color: #c6007e;
   text-transform: uppercase;
-  margin-bottom: 0px;
 }
 
 .card-content-wrapper {
@@ -175,7 +173,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 10px 0 20px;
   vertical-align: middle;
   background-color: #fff;
   width: 442px;
@@ -183,34 +180,38 @@ export default {
   min-height: 100px;
   margin-left: -21px;
   margin-top: 129px;
-  overflow: hidden;
   transition: .2s;
 }
 
 .card:hover .cta {
   display: block;
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 40px;
-  margin-left: -20px;
-  margin-top: 188px;
+  margin-bottom: -50px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  transition: .5s;
+  visibility: visible;
 }
 
 .card:hover .card-content-wrapper {
-  margin-top: 88px;
+  margin-top: 89px;
 }
 
 .cta {
-  display: none;
-  height: 0px;
+  visibility: hidden;
+  height: 40px;
   width: 100%;
   color: #fff;
   z-index: 9000;
-  font-size: 14px;
+  font-size: 0px;
   font-weight: 700;
-  padding: 10px 20px;
+  font-size: 14px;
   text-align: left;
   align-items: center;
+  margin-bottom: -30px;
+  padding: 10px 20px;
   text-transform: uppercase;
   background-color: #c6007e;
   border-radius: 0 0 3px 3px;
@@ -218,8 +219,10 @@ export default {
 }
 
 .card-content {
+  margin-left: 20px;
   font-size: 14px;
   text-shadow: none;
+  margin-bottom: -1px;
 }
 
 .price {
@@ -227,6 +230,7 @@ export default {
   font-size: 20px;
   font-weight: 700;
   color: #06038d;
+  margin-right: 20px;
 }
 
 .disclaimer-wrap {

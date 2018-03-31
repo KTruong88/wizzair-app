@@ -18,6 +18,9 @@
           <p class="banner2-content">
             Book today and get <strong>10% of your hotel booking back!</strong>
           </p>
+          <div class="cta">
+            More Info
+          </div>
         </div>
       </div>
 
@@ -34,6 +37,9 @@
             Enjoy <strong>7% Wizz Air credit</strong>
             when you book your car rental
           </p>
+          <div class="cta">
+            More Info
+          </div>
         </div>
       </div>
 
@@ -86,6 +92,35 @@ export default {
   padding-left: 20px;
 }
 
+.cta {
+  visibility: hidden;
+  height: 40px;
+  width: 100%;
+  color: #fff;
+  z-index: 9000;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: left;
+  align-items: center;
+  margin-top: 5px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  background-color: #c6007e;
+  font-family: P22 Underground Pro,sans-serif;
+}
+
+.top-left-wrapper:hover .cta,
+.top-right-wrapper:hover .cta {
+  width: 100%;
+  height: 40px;
+  transition: .3s;
+  visibility: visible;
+  position: relative;
+  margin-top: -18px;
+  margin-bottom: -41px;
+  border-bottom-right-radius: 3px;
+}
+
 .top-left-wrapper,
 .top-right-wrapper {
   display: flex;
@@ -93,7 +128,13 @@ export default {
   margin-right: 20px;
 }
 
+.top-left-wrapper,
+.top-right-wrapper:hover {
+  cursor: pointer;
+}
+
 .banner {
+  position: relative;
   height: 140px;
   width: 100%;
   max-width: 331px;
@@ -154,10 +195,35 @@ strong {
   color: #c6007e;
 }
 
+@media only screen and (max-width:1129px) {
+  .top-right-wrapper:hover .cta {
+    margin-top: -34px;
+    height: 35px;
+  }
+}
+
+@media only screen and (max-width:964px) {
+  .top-left-wrapper:hover .cta {
+    margin-top: -34px;
+    height: 35px;
+  }
+}
+
 @media only screen and (max-width:830px) {
   .title {
     margin-top: 30px;
     margin-bottom: 110px;
+  }
+
+  .top-left-wrapper:hover .cta {
+    height: 42px;
+    margin-top: 1px;
+  }
+
+  .top-right-wrapper:hover .cta,
+  .cta {
+    height: 42px;
+    margin-top: 1px;
   }
 
   .top-left-wrapper, .top-right-wrapper {
@@ -184,6 +250,19 @@ strong {
 
   .banner-wrap {
     flex-direction: column;
+  }
+}
+
+@media only screen and (max-width:775px) {
+  .top-left-wrapper:hover .cta {
+    height: 40px;
+    margin-top: -18px;
+  }
+
+  .top-right-wrapper:hover .cta,
+  .cta {
+    height: 40px;
+    margin-top: -18px;
   }
 }
 

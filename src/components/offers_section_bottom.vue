@@ -6,6 +6,7 @@
       <div class="box box1">
 
       </div>
+
       <div class="content">
         <p class="title">
           Even prices go better together!
@@ -34,13 +35,12 @@
       <div class="box box3">
 
       </div>
-      <div class="content">
+      <div class="content content2">
         <p class="title">
                           Gift Voucher
         </p>
         <p class="text">
           Surprise your loved ones with a gift they will never forget!
-
         </p>
       </div>
     </div>
@@ -49,7 +49,7 @@
       <div class="box box4">
 
       </div>
-      <div class="content">
+      <div class="content content2">
         <p class="title">
           Airport Parking
         </p>
@@ -90,6 +90,7 @@ export default {
 .box-wrap {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .box {
@@ -97,11 +98,24 @@ export default {
   width: 325px;
   background-size: 100%;
   border-radius: 3px;
+  position: relative;
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+  height: 107px;
+  width: 325px;
+  background-color: #fff;
+  margin-top: -107px;
+  line-height: 16px;
+  position: relative;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
+}
+
+.content:hover {
+  cursor: pointer;
 }
 
 .box:hover {
@@ -122,20 +136,6 @@ export default {
 
 .box4 {
   background-image: URL("https://wizzair.com/static/images/default-source/banner-images/3rd-party-banners/airport-parking_18d6c32c.jpg");
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  height: 107px;
-  width: 325px;
-  background-color: #fff;
-  margin-top: -107px;
-  line-height: 16px;
-}
-
-.content:hover {
-  cursor: pointer;
 }
 
 .title {
