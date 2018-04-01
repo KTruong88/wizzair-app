@@ -196,7 +196,7 @@ export default {
       this.openJoke = false
     },
     getJoke() {
-      this.$http.get("http://localhost:3000")
+      this.$http.get("https://wizzair-clone.herokuapp.com/")
       .then(response => {
         let random_jokes = []
         let jokes = response.body.value
@@ -235,29 +235,29 @@ export default {
 }
 
 .form-wrap-wrap {
+    width: 100%;
     display: flex;
     justify-content: center;
-    width: 100%;
 }
 
 .form-wrap {
-  align-self: center;
   width: 100%;
   max-width: 1400px;
+  align-self: center;
 }
 
 .flight-modal {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: absolute;
-  z-index: 400;
-  height: 423px;
   width: 80%;
   max-width: 338px;
-  margin-left: 410px;
+  height: 423px;
+  z-index: 400;
   padding: 20px;
+  position: absolute;
+  margin-left: 410px;
   background-color: #fff;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .fa-icon {
