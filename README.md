@@ -17,9 +17,12 @@
 
 ![screenshot of modal](https://github.com/KTruong88/wizzair/blob/master/images/ss6.png)
 
-## Build Setup
+## Check out the project
 
 ``` bash
+# clone the repository on your computer
+cd wizzair
+
 # install dependencies
 npm install
 
