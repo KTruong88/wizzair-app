@@ -1,6 +1,21 @@
 # wizzair
 
-> A Vue.js project
+<a href="https://www.linkedin.com/in/ktruong01/">LinkedIn</a> <br>
+<a href="https://ktruong88.github.io/">Portfolio</a>
+
+<h4>A clone of Wizzair.com's website.</h4>
+<p>Utilizing Vue.js components, created a fully responsive, identical website with most of the functionality.</p>
+
+
+![screenshot of homepage](https://github.com/KTruong88/wizzair/blob/master/images/ss1.png)
+
+![screenshot of modal](https://github.com/KTruong88/wizzair/blob/master/images/ss5.png)
+
+![screenshot of body](https://github.com/KTruong88/wizzair/blob/master/images/ss3.png)
+
+![screenshot of footer](https://github.com/KTruong88/wizzair/blob/master/images/ss4.png)
+
+![screenshot of modal](https://github.com/KTruong88/wizzair/blob/master/images/ss6.png)
 
 ## Build Setup
 
@@ -11,11 +26,4 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+# open browser and go to localhost:8080
