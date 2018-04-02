@@ -1,7 +1,7 @@
 {
   "name": "wizzair",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "wizzair clone",
   "author": "Kevin Truong <kevintru0ng@yahoo.com>",
   "private": true,
   "scripts": {
