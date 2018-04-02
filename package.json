@@ -8,7 +8,8 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js",
-    "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build",
+    "deploy": "node ./node_modules/vue-gh-pages/index.js"
   },
   "dependencies": {
     "bootstrap-vue": "^2.0.0-rc.2",
@@ -31,9 +32,9 @@
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
-    "file-loader": "^1.1.4",
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
@@ -46,9 +47,9 @@
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
+    "vue-gh-pages": "^1.10.2",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
-    "webpack": "^3.11.0",
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.11.0",
     "webpack-bundle-analyzer": "^2.9.0",
@@ -56,6 +57,7 @@
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
+  "homepage": "https://github.com/KTruong88/wizzair-app",
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
